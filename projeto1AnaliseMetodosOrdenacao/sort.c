@@ -1,17 +1,7 @@
-// #include "sort.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "sort.h"
 
 #define get_address(vector, position, size) ((vector) + ((position) * (size)))
-#define SORT_FUNCS_ARGUMENTS void *vector, u_long tamVector, size_t SizeValuesVector, int (*comparator)(void *, void *)
-
-typedef unsigned long u_long;
-
-// void bubble_sort(SORT_FUNCS_ARGUMENTS);
-// void merge_sort(SORT_FUNCS_ARGUMENTS);
-// void heap_sort(SORT_FUNCS_ARGUMENTS);
-// void print_vector(const int *vector, const int tamVector);
+#define get_int_from_ptr(integer) (*(int *) integer)
 
 inline void print_vector(const int *vector, const int tamVector)
 {
@@ -21,9 +11,9 @@ inline void print_vector(const int *vector, const int tamVector)
   puts("]");
 }
 
-int compareInteger(void *i1, void *i2)
+inline int compare_integer(void *i1, void *i2)
 {
-  return (*(int *)i1 > *(int *)i2) ? 1 : 0;
+  return (get_int_from_ptr(i1) > get_int_from_ptr(i2)) ? 1 : 0;
 }
 
 static inline void *create_tmp_pointer(size_t *size)
@@ -82,7 +72,7 @@ static inline void merge_sort_merge_vectors(void *vector, const u_long *init, co
     memcpy(get_address(vector, i, *SizeValuesVector), get_address(tmpV, i, *SizeValuesVector), *SizeValuesVector);
 }
 
-void merge_sort_recursive(void *vector, const u_long *init, const u_long *end, void *tmpV, const size_t *SizeValuesVector, int (*comparator)(void *, void *))
+static void merge_sort_recursive(void *vector, const u_long *init, const u_long *end, void *tmpV, const size_t *SizeValuesVector, int (*comparator)(void *, void *))
 {
   if ((*end - *init) < 2)
     return;
