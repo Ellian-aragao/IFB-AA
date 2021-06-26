@@ -1,20 +1,6 @@
 #include "sort.h"
 
 #define get_address(vector, position, size) ((vector) + ((position) * (size)))
-#define get_int_from_ptr(integer) (*(int *) integer)
-
-inline void print_vector(const int *vector, const int tamVector)
-{
-  putchar('[');
-  for (int i = 0; i < tamVector; i++)
-    printf(i == tamVector - 1 ? "%d" : "%d, ", vector[i]);
-  puts("]");
-}
-
-inline int compare_integer(void *i1, void *i2)
-{
-  return (get_int_from_ptr(i1) > get_int_from_ptr(i2)) ? 1 : 0;
-}
 
 static inline void *create_tmp_pointer(size_t *size)
 {

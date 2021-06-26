@@ -12,7 +12,5 @@ typedef unsigned long u_long;
 void bubble_sort(SORT_FUNCS_ARGUMENTS);
 void merge_sort(SORT_FUNCS_ARGUMENTS);
 void heap_sort(SORT_FUNCS_ARGUMENTS);
-void print_vector(const int *vector, const int tamVector);
-int compare_integer(void *i1, void *i2);
 
 #endif // !SORT_H
