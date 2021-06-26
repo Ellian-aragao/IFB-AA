@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
 #include "config.h"
 
 static inline void error_exit(const char *error_msg)
@@ -45,21 +46,33 @@ void generate_numbers_random(FILE *file)
   }
 }
 
-void verify_configs()
+void verify_configs(const char *file_names[])
 {
   puts("Analizando arquivo de configuração");
   if (QUANTIDADE_DE_NUMEROS <= 0)
     error_exit("quantidade de numeros não pode ser menor que 1");
-  const char nome_invalido[] = "Nome do arquivo não pode ser vazio";
-  if (!strlen(FILENAME_NUMEROS_CRESCENTES) || !strlen(FILENAME_NUMEROS_DECRESCENTES) || !strlen(FILENAME_NUMEROS_RANDOMICOS))
-    error_exit(nome_invalido);
+
+  const char *nome_invalido = "Nome do arquivo não pode ser vazio";
+  for (int i = 0; i < 3; i++)
+  {
+    if (!strlen(file_names[i]))
+      error_exit(nome_invalido);
+  }
 }
 
-int main()
+void generate_teste_files()
 {
-  verify_configs();
-  create_bin_file(FILENAME_NUMEROS_CRESCENTES, generate_numbers_crescente);
-  create_bin_file(FILENAME_NUMEROS_DECRESCENTES, generate_numbers_decrescente);
-  create_bin_file(FILENAME_NUMEROS_RANDOMICOS, generate_numbers_random);
-  return 0;
+  const char *file_names[] = {
+      FILENAME_NUMEROS_CRESCENTES,
+      FILENAME_NUMEROS_DECRESCENTES,
+      FILENAME_NUMEROS_RANDOMICOS};
+
+  void (*functions[])(FILE *) = {
+      generate_numbers_crescente,
+      generate_numbers_decrescente,
+      generate_numbers_random};
+
+  verify_configs(file_names);
+  for (int i = 0; i < 3; i++)
+    create_bin_file(file_names[i], functions[i]);
 }
