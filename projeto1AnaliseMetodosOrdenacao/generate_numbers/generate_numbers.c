@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
-#include "config.h"
+#include "../config.h"
 
 static inline void error_exit(const char *error_msg)
 {
@@ -14,13 +14,10 @@ static inline void error_exit(const char *error_msg)
 void create_bin_file(const char *file_name, void (*func)(FILE *))
 {
   FILE *file;
-  const char *divisor = "-------------------------------------------------\n";
-  printf("%sCriando arquivo: %s\n", divisor, file_name);
+  printf("Criando arquivo: %s\n", file_name);
   if ((file = fopen(file_name, "wb")) == NULL)
     error_exit("Erro ao criar arquivo");
-  puts("Arquivo criado com SUCESSO\nPopulando dados no arquivo");
   func(file);
-  puts("Processo concluído com sucesso");
   fclose(file);
 }
 
@@ -46,22 +43,17 @@ void generate_numbers_random(FILE *file)
   }
 }
 
-void verify_configs(const char *file_names[])
+void verify_configs(const char *file_names)
 {
-  puts("Analizando arquivo de configuração");
-  if (QUANTIDADE_DE_NUMEROS <= 0)
-    error_exit("quantidade de numeros não pode ser menor que 1");
-
   const char *nome_invalido = "Nome do arquivo não pode ser vazio";
-  for (int i = 0; i < 3; i++)
-  {
-    if (!strlen(file_names[i]))
-      error_exit(nome_invalido);
-  }
+  if (!strlen(file_names))
+    error_exit(nome_invalido);
 }
 
-void generate_teste_files()
+void *generate_teste_files(void *index_from_thread)
 {
+  const long index = (long)index_from_thread;
+
   const char *file_names[] = {
       FILENAME_NUMEROS_CRESCENTES,
       FILENAME_NUMEROS_DECRESCENTES,
@@ -72,7 +64,31 @@ void generate_teste_files()
       generate_numbers_decrescente,
       generate_numbers_random};
 
-  verify_configs(file_names);
-  for (int i = 0; i < 3; i++)
-    create_bin_file(file_names[i], functions[i]);
+  verify_configs(file_names[index]);
+  create_bin_file(file_names[index], functions[index]);
+  pthread_exit(index_from_thread);
+}
+
+int main()
+{
+  puts("Analizando arquivo de configuração");
+  if (QUANTIDADE_DE_NUMEROS <= 0)
+    error_exit("quantidade de numeros não pode ser menor que 1");
+
+  const int NUM_THREADS = 3;
+  pthread_t thread[NUM_THREADS];
+
+  for (long i = 0; i < NUM_THREADS; i++)
+  {
+    if (pthread_create(&thread[i], NULL, generate_teste_files, (void *)i))
+      error_exit("ERROR from pthread_create");
+  }
+
+  for (int i = 0; i < NUM_THREADS; i++)
+  {
+    if (pthread_join(thread[i], NULL))
+      error_exit("ERROR from pthread_join");
+  }
+
+  pthread_exit(NULL);
 }
