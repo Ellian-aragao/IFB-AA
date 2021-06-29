@@ -17,7 +17,9 @@ void create_bin_file(const char *file_name, void (*func)(FILE *))
   printf("Criando arquivo: %s\n", file_name);
   if ((file = fopen(file_name, "wb")) == NULL)
     error_exit("Erro ao criar arquivo");
+  puts("Iniciando escrita");
   func(file);
+  puts("Finalizando escrita");
   fclose(file);
 }
 
@@ -52,7 +54,7 @@ void verify_configs(const char *file_names)
 
 void *generate_teste_files(void *index_from_thread)
 {
-  const long index = (long)index_from_thread;
+  const int index = (int)index_from_thread;
 
   const char *file_names[] = {
       FILENAME_NUMEROS_CRESCENTES,
@@ -78,7 +80,7 @@ int main()
   const int NUM_THREADS = 3;
   pthread_t thread[NUM_THREADS];
 
-  for (long i = 0; i < NUM_THREADS; i++)
+  for (int i = 0; i < NUM_THREADS; i++)
   {
     if (pthread_create(&thread[i], NULL, generate_teste_files, (void *)i))
       error_exit("ERROR from pthread_create");
