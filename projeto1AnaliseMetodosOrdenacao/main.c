@@ -12,12 +12,12 @@ int main(int argc, char const *argv[])
     perror("Deve-se enviar valores de entrada no programa");
     exit(EXIT_FAILURE);
   }
-  int buf[QUANTIDADE_DE_NUMEROS];
-  salve_read_file_data_in_vector(buf, FILENAME_NUMEROS_DECRESCENTES);
-  print_vector(buf, QUANTIDADE_DE_NUMEROS);
-  bubble_sort(&buf, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
-  print_vector(buf, QUANTIDADE_DE_NUMEROS);
-  return 0;
+  int *vector;
+  if ((vector = (int *)malloc((sizeof(int)) * QUANTIDADE_DE_NUMEROS)) == NULL)
+  {
+    perror("Erro o alocar memória para vetor de ordenação");
+    exit(EXIT_FAILURE);
+  }
 }
 
 void salve_read_file_data_in_vector(int *vector, const char *file_name)
