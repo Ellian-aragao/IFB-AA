@@ -1,15 +1,30 @@
 #include "config.h"
+#include <string.h>
 #include "sorts/sort.h"
+
+enum Sort
+{
+  bubble = 'b',
+  heap = 'h',
+  merge = 'm'
+};
 
 void salve_read_file_data_in_vector(int *vector, const char *file_name);
 int compare_integer(void *i1, void *i2);
 void print_vector(const int *vector, const int tamVector);
+void verifica_algoritmo(void *vector, const char algoritmo);
+int is_algoritmo_enviado_valido(const char algoritmo);
 
 int main(int argc, char const *argv[])
 {
-  if (argc < 2)
+  if (argc < 3)
   {
-    perror("Deve-se enviar um arquivo de entrada no programa");
+    perror("Deve-se enviar o nome do algoritmo de ordenação e um arquivo de entrada no programa");
+    exit(EXIT_FAILURE);
+  }
+  if (strlen(argv[1]) > 1 || !is_algoritmo_enviado_valido(argv[1][0]))
+  {
+    perror("Algoritmo enviado inválido. Envie: b: bubble_sort\nh: heap_sort\nm: merge_sort\n");
     exit(EXIT_FAILURE);
   }
 
@@ -20,10 +35,39 @@ int main(int argc, char const *argv[])
     exit(EXIT_FAILURE);
   }
 
-  salve_read_file_data_in_vector(vector, argv[1]);
-  bubble_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+  salve_read_file_data_in_vector(vector, argv[2]);
+  verifica_algoritmo(vector, argv[1][0]);
   free(vector);
   return EXIT_SUCCESS;
+}
+
+int is_algoritmo_enviado_valido(const char algoritmo)
+{
+  switch (algoritmo)
+  {
+  case bubble:
+  case heap:
+  case merge:
+    return 1;
+  default:
+    return 0;
+  }
+}
+
+void verifica_algoritmo(void *vector, const char algoritmo)
+{
+  switch (algoritmo)
+  {
+  case bubble:
+    bubble_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    break;
+  case heap:
+    heap_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    break;
+  case merge:
+    merge_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    break;
+  }
 }
 
 void salve_read_file_data_in_vector(int *vector, const char *file_name)
