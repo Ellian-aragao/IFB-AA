@@ -1,0 +1,5 @@
+.vscode
+*.bin
+a.out
+sort
+dist
