@@ -10,7 +10,7 @@ void create_bin_file(const char *file_name, void (*func)(FILE *))
 {
   FILE *file;
   printf("Criando arquivo: %s\n", file_name);
-  if ((file = fopen(file_name, "w")) == NULL)
+  if ((file = fopen(file_name, "wb")) == NULL)
     error_exit("Erro ao criar arquivo");
   printf("Iniciando escrita %s\n", file_name);
   func(file);
