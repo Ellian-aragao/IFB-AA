@@ -9,20 +9,20 @@ enum Sort
   merge = 'm'
 };
 
-typedef long long llong;
+typedef unsigned long long llong;
 
-void read_file_and_save_in_vector(int *vector, const char *file_name);
+void read_file_and_save_in_vector(int *vector, const char *file_name, const llong *quantidade_numeros);
 int compare_integer(void *i1, void *i2);
 void print_vector(const int *vector, const int tamVector);
-void apply_algorithm(void *vector, const char algoritmo);
+void apply_algorithm(void *vector, const char algoritmo, const llong *quantidade_numeros);
 int valid_algorithm_parameter(const char algoritmo);
 int valid_read_parameter(const char read_mode);
 void if_true_print_msg_exit(int is_true, const char *msg);
-llong verify_arguments(int argc, char const *argv[]);
+llong verify_arguments_return_needs_to_read(int argc, char const *argv[]);
 
 int main(int argc, char const *argv[])
 {
-  const llong quantidade_numeros = verify_arguments(argc, argv);
+  const llong quantidade_numeros = verify_arguments_return_needs_to_read(argc, argv);
 
   int *vector;
   if ((vector = (int *)malloc((sizeof(int)) * quantidade_numeros)) == NULL)
@@ -31,13 +31,13 @@ int main(int argc, char const *argv[])
     exit(EXIT_FAILURE);
   }
 
-  read_file_and_save_in_vector(vector, argv[2]);
-  apply_algorithm(vector, argv[1][0]);
+  read_file_and_save_in_vector(vector, argv[2], &quantidade_numeros);
+  apply_algorithm(vector, argv[1][0], &quantidade_numeros);
   free(vector);
   return EXIT_SUCCESS;
 }
 
-llong verify_arguments(int argc, char const *argv[])
+llong verify_arguments_return_needs_to_read(int argc, char const *argv[])
 {
   if_true_print_msg_exit(
       argc < 3,
@@ -80,23 +80,23 @@ int valid_algorithm_parameter(const char algoritmo)
   }
 }
 
-void apply_algorithm(void *vector, const char algoritmo)
+void apply_algorithm(void *vector, const char algoritmo, const llong *quantidade_numeros)
 {
   switch (algoritmo)
   {
   case bubble:
-    bubble_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    bubble_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
     break;
   case heap:
-    heap_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    heap_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
     break;
   case merge:
-    merge_sort(vector, QUANTIDADE_DE_NUMEROS, sizeof(int), compare_integer);
+    merge_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
     break;
   }
 }
 
-void read_file_and_save_in_vector(int *vector, const char *file_name)
+void read_file_and_save_in_vector(int *vector, const char *file_name, const llong *quantidade_numeros)
 {
   FILE *read;
   if ((read = fopen(file_name, "rb")) == NULL)
@@ -104,7 +104,7 @@ void read_file_and_save_in_vector(int *vector, const char *file_name)
     fprintf(stderr, "Erro ao ler o arquivo %s\n", file_name);
     exit(EXIT_FAILURE);
   }
-  for (size_t i = 0; i < QUANTIDADE_DE_NUMEROS; i++)
+  for (llong i = 0; i < *quantidade_numeros; i++)
     fread(&vector[i], sizeof(int), 1, read);
   fclose(read);
 }
