@@ -27,6 +27,8 @@ if __name__ == '__main__':
     listFiles: List[str] = listdir('dist')
     binArray = verify_generated_numbers_files(listFiles)
     algArray = ['b', 'm', 'h']
+    entradas = [1,10,1e2,1e3,1e4,1e5,1e6,1e7,1e8,1e9]
     for file in binArray:
         for alg in algArray:
-            call(['dist/sorts', alg, file])
+            for entrada in entradas:
+                call(['./memusg dist/sorts', alg, file, 'b', str(entrada)])
