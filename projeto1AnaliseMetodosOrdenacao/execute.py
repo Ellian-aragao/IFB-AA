@@ -31,4 +31,6 @@ if __name__ == '__main__':
     for file in binArray:
         for alg in algArray:
             for entrada in entradas:
-                call(['./memusg dist/sorts', alg, file, 'b', str(entrada)])
+                cmd = ['./memusg.py', 'dist/sorts', alg, file, 'b', str(entrada)]
+                print('cmd: {}'.format(cmd), end='')
+                call(cmd)
