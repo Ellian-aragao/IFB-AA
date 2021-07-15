@@ -1,0 +1,175 @@
+Measure-Command {.\a.exe h .\numeros_crescentes.bin b 1000}   
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 102
+Ticks             : 1029193
+TotalDays         : 1,19119560185185E-06
+TotalHours        : 2,85886944444444E-05
+TotalMinutes      : 0,00171532166666667 
+TotalSeconds      : 0,1029193
+TotalMilliseconds : 102,9193
+
+Measure-Command {.\a.exe h .\numeros_crescentes.bin b 10000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 114
+Ticks             : 1140374
+TotalDays         : 1,31987731481481E-06
+TotalHours        : 3,16770555555556E-05
+TotalMinutes      : 0,00190062333333333 
+TotalSeconds      : 0,1140374
+TotalMilliseconds : 114,0374
+
+
+Measure-Command {.\a.exe h .\numeros_crescentes.bin b 100000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 196
+Ticks             : 1969123
+TotalDays         : 2,2790775462963E-06 
+TotalHours        : 5,46978611111111E-05
+TotalMinutes      : 0,00328187166666667 
+TotalSeconds      : 0,1969123
+TotalMilliseconds : 196,9123
+
+
+Measure-Command {.\a.exe h .\numeros_crescentes.bin b 1000000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 591
+Ticks             : 5916731
+TotalDays         : 6,84806828703704E-06
+TotalHours        : 0,000164353638888889
+TotalMinutes      : 0,00986121833333333 
+TotalSeconds      : 0,5916731
+TotalMilliseconds : 591,6731
+
+
+---------------------------------------------------------------------------------------------
+
+Measure-Command {.\a.exe h .\numeros_decrescentes.bin b 1000} 
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 143
+Ticks             : 1435509       
+TotalDays         : 1,66146875E-06
+TotalHours        : 3,987525E-05  
+TotalMinutes      : 0,002392515   
+TotalSeconds      : 0,1435509
+TotalMilliseconds : 143,5509
+
+
+Measure-Command {.\a.exe h .\numeros_decrescentes.bin b 10000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 126
+Ticks             : 1266420
+TotalDays         : 1,46576388888889E-06
+TotalHours        : 3,51783333333333E-05
+TotalMinutes      : 0,0021107
+TotalSeconds      : 0,126642
+TotalMilliseconds : 126,642
+
+
+Measure-Command {.\a.exe h .\numeros_decrescentes.bin b 100000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 114
+Ticks             : 1145487
+TotalDays         : 1,32579513888889E-06
+TotalHours        : 3,18190833333333E-05
+TotalMinutes      : 0,001909145
+TotalSeconds      : 0,1145487
+TotalMilliseconds : 114,5487
+
+Measure-Command {.\a.exe h .\numeros_decrescentes.bin b 1000000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 568
+Ticks             : 5687059
+TotalDays         : 6,58224421296296E-06
+TotalHours        : 0,000157973861111111
+TotalMinutes      : 0,00947843166666667 
+TotalSeconds      : 0,5687059
+TotalMilliseconds : 568,7059
+
+
+---------------------------------------------------------------------------------------------
+
+Measure-Command {.\a.exe h .\numeros_randomicos.bin b 10000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 138
+Ticks             : 1384757
+TotalDays         : 1,60272800925926E-06
+TotalHours        : 3,84654722222222E-05
+TotalMinutes      : 0,00230792833333333 
+TotalSeconds      : 0,1384757
+TotalMilliseconds : 138,4757
+
+
+Measure-Command {.\a.exe h .\numeros_randomicos.bin b 100000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 212
+Ticks             : 2125767
+TotalDays         : 2,46037847222222E-06
+TotalHours        : 5,90490833333333E-05
+TotalMinutes      : 0,003542945
+TotalSeconds      : 0,2125767
+TotalMilliseconds : 212,5767
+
+Measure-Command {.\a.exe h .\numeros_randomicos.bin b 1000000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 723
+Ticks             : 7230851
+TotalDays         : 8,36904050925926E-06
+TotalHours        : 0,000200856972222222
+TotalMinutes      : 0,0120514183333333  
+TotalSeconds      : 0,7230851
+TotalMilliseconds : 723,0851
