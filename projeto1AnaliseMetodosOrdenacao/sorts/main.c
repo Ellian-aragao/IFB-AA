@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
   read_file_and_save_in_vector(vector, argv[2], &quantidade_numeros);
   double time_execution = get_time_execution(vector, argv[1][0], &quantidade_numeros);
   free(vector);
-  printf("Sort %s | arquivo de entrada %s | quantidade de entradas %ld | tempo de execução %lf \n", argv[1], argv[2], quantidade_numeros, time_execution);
+  printf("Sort %s | arquivo de entrada %s | quantidade de entradas %ld | tempo de execução %lf | ", argv[1], argv[2], quantidade_numeros, time_execution);
   return EXIT_SUCCESS;
 }
 
