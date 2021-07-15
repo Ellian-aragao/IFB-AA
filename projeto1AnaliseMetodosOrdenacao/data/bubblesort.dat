@@ -1,0 +1,142 @@
+Measure-Command {.\a.exe b .\numeros_crescentes.bin b 1000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 73
+Ticks             : 735140
+TotalDays         : 8,50856481481481E-07
+TotalHours        : 2,04205555555556E-05
+TotalMinutes      : 0,00122523333333333
+TotalSeconds      : 0,073514
+TotalMilliseconds : 73,514
+
+Measure-Command {.\a.exe b .\numeros_crescentes.bin b 10000}
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 80
+Ticks             : 804916
+TotalDays         : 9,31615740740741E-07
+TotalHours        : 2,23587777777778E-05
+TotalMinutes      : 0,00134152666666667
+TotalSeconds      : 0,0804916
+TotalMilliseconds : 80,4916
+
+Measure-Command {.\a.exe b .\numeros_crescentes.bin b 100000}
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 80
+Ticks             : 807086
+TotalDays         : 9,34127314814815E-07
+TotalHours        : 2,24190555555556E-05
+TotalMinutes      : 0,00134514333333333
+TotalSeconds      : 0,0807086
+TotalMilliseconds : 80,7086
+
+Measure-Command {.\a.exe b .\numeros_crescentes.bin b 1000000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 196
+Ticks             : 1965608
+TotalDays         : 2,27500925925926E-06
+TotalHours        : 5,46002222222222E-05A\projeto1AnaliseMetodosOrdenacao\generate_numTotalMinutes      : 0,00327601333333333
+TotalSeconds      : 0,1965608
+TotalMilliseconds : 196,5608
+
+
+------------------------------------------------------------------------------------------------
+Measure-Command {.\a.exe b .\numeros_decrescentes.bin b 1000}
+
+
+Days              : 0
+Hours             : 0Minutes           : 0
+Seconds           : 0Milliseconds      : 119
+Ticks             : 1198773       
+TotalDays         : 1,38746875E-06
+TotalHours        : 3,329925E-05  \IFB-AA\projeto1AnaliseMetodosOrdenacao\generate_numTotalMinutes      : 0,001997955.exe b .\numeros_decrescentes.bin b 1000}
+TotalSeconds      : 0,1198773
+TotalMilliseconds : 119,8773
+
+Measure-Command {.\a.exe b .\numeros_decrescentes.bin b 10000}
+
+
+Days              : 0Hours             : 0
+Minutes           : 0
+Seconds           : 1
+Milliseconds      : 53
+Ticks             : 10531852
+TotalDays         : 1,21896435185185E-05
+TotalHours        : 0,000292551444444444TotalMinutes      : 0,0175530866666667  
+TotalSeconds      : 1,0531852itHub\IFB-AA\projeto1AnaliseMetodosOrdenacao\generate_numTotalMilliseconds : 1053,1852
+
+
+Measure-Command {.\a.exe b .\numeros_decrescentes.bin b 100000}
+Days              : 0
+Hours             : 0Minutes           : 1
+Seconds           : 31
+Milliseconds      : 658
+Ticks             : 916584650
+TotalDays         : 0,00106086186342593AA\projeto1AnaliseMetodosOrdenacao\generate_numTotalHours        : 0,0254606847222222.\numeros_decrescentes.bin b 10000}
+TotalMinutes      : 1,52764108333333
+TotalSeconds      : 91,658465
+TotalMilliseconds : 91658,465
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Measure-Command {.\a.exe b .\numeros_randomicos.bin b 1000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 84
+Ticks             : 841641
+TotalDays         : 9,74121527777778E-07
+TotalHours        : 2,33789166666667E-05
+TotalMinutes      : 0,001402735
+TotalSeconds      : 0,0841641
+TotalMilliseconds : 84,1641
+
+Measure-Command {.\a.exe b .\numeros_randomicos.bin b 10000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 706
+Ticks             : 7068701
+TotalDays         : 8,18136689814815E-06
+TotalHours        : 0,000196352805555556
+TotalMinutes      : 0,0117811683333333  
+TotalSeconds      : 0,7068701
+TotalMilliseconds : 706,8701
+
+Measure-Command {.\a.exe b .\numeros_randomicos.bin b 100000}
+
+
+Days              : 0
+Hours             : 0
+Minutes           : 1
+Seconds           : 6
+Milliseconds      : 809
+Ticks             : 668090159
+TotalDays         : 0,000773252498842593
+TotalHours        : 0,0185580599722222
+TotalMinutes      : 1,11348359833333
+TotalSeconds      : 66,8090159
+TotalMilliseconds : 66809,0159
+
+
