@@ -1,6 +1,6 @@
 #!/bin/env python3
 
-from subprocess import run, Popen
+from subprocess import call, run, Popen
 from os import listdir, replace
 from os.path import isdir
 from typing import List
@@ -27,10 +27,10 @@ if __name__ == '__main__':
     listFiles: List[str] = listdir('dist')
     binArray = verify_generated_numbers_files(listFiles)
     algArray = ['b', 'm', 'h']
-    entradas = [1e0,1e1,1e2,1e3,1e4,1e5,1e6,1e7,1e8,1e9]
-    for file in binArray:
-        for alg in algArray:
+    entradas = [1e0,1e1,1e2,1e3,1e4,1e5,1e6] #,1e7,1e8,1e9]
+    for alg in algArray:
+        for file in binArray:
             for entrada in entradas:
-                cmd = ['./memusg.py', 'dist/sorts', alg, file, 'b', str(entrada)]
+                cmd = ['./memusgh.py', 'dist/sorts', alg, file, 'b', str(entrada)]
                 print('cmd: {}'.format(cmd), end='')
                 run(cmd)
