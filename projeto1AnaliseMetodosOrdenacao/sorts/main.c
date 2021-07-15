@@ -1,5 +1,6 @@
 #include "../config.h"
 #include <string.h>
+#include <time.h>
 #include "sort.h"
 
 enum Sort
@@ -14,11 +15,12 @@ typedef unsigned long long llong;
 void read_file_and_save_in_vector(int *vector, const char *file_name, const llong *quantidade_numeros);
 int compare_integer(void *i1, void *i2);
 void print_vector(const int *vector, const int tamVector);
-void apply_algorithm(void *vector, const char algoritmo, const llong *quantidade_numeros);
+void apply_algorithm(void *vector, const char *algoritmo, const llong *quantidade_numeros);
 int valid_algorithm_parameter(const char algoritmo);
 int valid_read_parameter(const char read_mode);
 void if_true_print_msg_exit(int is_true, const char *msg);
 llong verify_arguments_return_needs_to_read(int argc, char const *argv[]);
+double get_time_execution(void *vector, const char algoritmo, const llong *quantidade_numeros);
 
 int main(int argc, char const *argv[])
 {
@@ -30,11 +32,19 @@ int main(int argc, char const *argv[])
     perror("Erro o alocar memória para vetor de ordenação");
     exit(EXIT_FAILURE);
   }
-
   read_file_and_save_in_vector(vector, argv[2], &quantidade_numeros);
-  apply_algorithm(vector, argv[1][0], &quantidade_numeros);
+  double time_execution = get_time_execution(vector, argv[1][0], &quantidade_numeros);
   free(vector);
+  printf("Sort %s | arquivo de entrada %s | quantidade de entradas %ld | tempo de execução %lf \n", argv[1], argv[2], quantidade_numeros, time_execution);
   return EXIT_SUCCESS;
+}
+
+double get_time_execution(void *vector, const char algoritmo, const llong *quantidade_numeros)
+{
+  clock_t begin = clock();
+  apply_algorithm(vector, &algoritmo, quantidade_numeros);
+  clock_t end = clock();
+  return (double)(end - begin) / CLOCKS_PER_SEC;
 }
 
 llong verify_arguments_return_needs_to_read(int argc, char const *argv[])
@@ -80,9 +90,9 @@ int valid_algorithm_parameter(const char algoritmo)
   }
 }
 
-void apply_algorithm(void *vector, const char algoritmo, const llong *quantidade_numeros)
+void apply_algorithm(void *vector, const char *algoritmo, const llong *quantidade_numeros)
 {
-  switch (algoritmo)
+  switch (*algoritmo)
   {
   case bubble:
     bubble_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
