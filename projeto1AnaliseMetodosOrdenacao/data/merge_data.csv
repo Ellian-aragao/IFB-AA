@@ -1,0 +1,19 @@
+case,entradas,tempo(s),memoria(kb)
+ random_case,1,0.000002,8800   
+ random_case,10,0.000004,8612   
+ random_case,100,0.000024,8692   
+ random_case,1000,0.000292,8568   
+ random_case,10000,0.003314,8900   
+ random_case,100000,0.047693,10716  
+ best_case,1,0.000002,8620   
+ best_case,10,0.000004,8820   
+ best_case,100,0.000016,8900   
+ best_case,1000,0.000183,8892   
+ best_case,10000,0.002532,8904   
+ best_case,100000,0.029455,10664  
+ worst_case,1,0.000002,8528   
+ worst_case,10,0.000004,8892   
+ worst_case,100,0.000018,8628   
+ worst_case,1000,0.000395,8696   
+ worst_case,10000,0.002886,8624   
+ worst_case,100000,0.033750,10492  
