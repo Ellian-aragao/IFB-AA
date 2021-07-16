@@ -1,43 +1,5 @@
-#include "../config.h"
-#include <string.h>
 #include <time.h>
-#include "sort.h"
-
-enum Sort
-{
-  bubble = 'b',
-  heap = 'h',
-  merge = 'm'
-};
-
-typedef unsigned long long llong;
-
-void read_file_and_save_in_vector(int *vector, const char *file_name, const llong *quantidade_numeros);
-int compare_integer(void *i1, void *i2);
-void print_vector(const int *vector, const int tamVector);
-void apply_algorithm(void *vector, const char *algoritmo, const llong *quantidade_numeros);
-int valid_algorithm_parameter(const char algoritmo);
-int valid_read_parameter(const char read_mode);
-void if_true_print_msg_exit(int is_true, const char *msg);
-llong verify_arguments_return_needs_to_read(int argc, char const *argv[]);
-double get_time_execution(void *vector, const char algoritmo, const llong *quantidade_numeros);
-
-int main(int argc, char const *argv[])
-{
-  const llong quantidade_numeros = verify_arguments_return_needs_to_read(argc, argv);
-
-  int *vector;
-  if ((vector = (int *)malloc((sizeof(int)) * quantidade_numeros)) == NULL)
-  {
-    perror("Erro o alocar memória para vetor de ordenação");
-    exit(EXIT_FAILURE);
-  }
-  read_file_and_save_in_vector(vector, argv[2], &quantidade_numeros);
-  double time_execution = get_time_execution(vector, argv[1][0], &quantidade_numeros);
-  free(vector);
-  printf("Sort %s | arquivo de entrada %s | quantidade de entradas %ld | tempo de execução %lf | ", argv[1], argv[2], quantidade_numeros, time_execution);
-  return EXIT_SUCCESS;
-}
+#include "utils.h"
 
 double get_time_execution(void *vector, const char algoritmo, const llong *quantidade_numeros)
 {
@@ -47,87 +9,20 @@ double get_time_execution(void *vector, const char algoritmo, const llong *quant
   return (double)(end - begin) / CLOCKS_PER_SEC;
 }
 
-llong verify_arguments_return_needs_to_read(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
-  if_true_print_msg_exit(
-      argc < 3,
-      "Deve-se enviar o nome do algoritmo de ordenação e um arquivo de entrada no programa");
-  if_true_print_msg_exit(
-      strlen(argv[1]) > 1 || !valid_algorithm_parameter(argv[1][0]),
-      "Algoritmo enviado inválido. Envie:\nb: bubble_sort\nh: heap_sort\nm: merge_sort\n");
+  const arg_cli args = verify_arguments_return_needs_to_read(argc, argv);
 
-  if_true_print_msg_exit(
-      argc == 4 && !valid_read_parameter(argv[3][0]),
-      "Modo de leitura de arquivo inválido\nEnvie:\nc: character\nb: binário\nvazio: binário\n");
-
-  return argc == 5 ? atoll(argv[4]) : QUANTIDADE_DE_NUMEROS;
-}
-
-void if_true_print_msg_exit(int is_true, const char *msg)
-{
-  if (is_true)
+  int *vector;
+  if ((vector = (int *)malloc((sizeof(int)) * args.lenght_input)) == NULL)
   {
-    perror(msg);
+    perror("Erro o alocar memória para vetor de ordenação");
     exit(EXIT_FAILURE);
   }
-}
-
-int valid_read_parameter(const char read_mode)
-{
-  return (read_mode == 'b' || read_mode == 'c') ? 1 : 0;
-}
-
-int valid_algorithm_parameter(const char algoritmo)
-{
-  switch (algoritmo)
-  {
-  case bubble:
-  case heap:
-  case merge:
-    return 1;
-  default:
-    return 0;
-  }
-}
-
-void apply_algorithm(void *vector, const char *algoritmo, const llong *quantidade_numeros)
-{
-  switch (*algoritmo)
-  {
-  case bubble:
-    bubble_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
-    break;
-  case heap:
-    heap_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
-    break;
-  case merge:
-    merge_sort(vector, *quantidade_numeros, sizeof(int), compare_integer);
-    break;
-  }
-}
-
-void read_file_and_save_in_vector(int *vector, const char *file_name, const llong *quantidade_numeros)
-{
-  FILE *read;
-  if ((read = fopen(file_name, "rb")) == NULL)
-  {
-    fprintf(stderr, "Erro ao ler o arquivo %s\n", file_name);
-    exit(EXIT_FAILURE);
-  }
-  for (llong i = 0; i < *quantidade_numeros; i++)
-    fread(&vector[i], sizeof(int), 1, read);
-  fclose(read);
-}
-
-void print_vector(const int *vector, const int tamVector)
-{
-  putchar('[');
-  for (int i = 0; i < tamVector; i++)
-    printf(i == tamVector - 1 ? "%d" : "%d, ", vector[i]);
-  puts("]");
-}
-
-int compare_integer(void *i1, void *i2)
-{
-  return ((*(int *)i1) < ((*(int *)i2)) ? 1 : 0);
+  read_file_and_save_in_vector(vector, &args);
+  double time_execution = get_time_execution(vector, argv[1][0], &args.lenght_input);
+  free(vector);
+  printf("Sort %s | arquivo de entrada %s -> tipo: %s | quantidade de entradas %ld | tempo de execução %lf | ",
+         args.algorithm, args.file_name, args.type_file, args.lenght_input, time_execution);
+  return EXIT_SUCCESS;
 }
