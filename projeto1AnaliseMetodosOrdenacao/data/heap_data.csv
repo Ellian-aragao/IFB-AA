@@ -1,19 +1,19 @@
-case,entradas,tempo(s),memoria(kb) 
- random_case,1,0.000002,8568   
- random_case,10,0.000004,8628   
- random_case,100,0.000013,8700   
- random_case,1000,0.000167,8840   
- random_case,10000,0.002197,8620   
- random_case,100000,0.025928,10444  
- best_case,1,0.000002,8900   
- best_case,10,0.000003,8844   
- best_case,100,0.000014,8632   
- best_case,1000,0.000232,8532   
- best_case,10000,0.002189,8704   
- best_case,100000,0.027219,10428  
- worst_case,1,0.000002,8892   
- worst_case,10,0.000003,8892   
- worst_case,100,0.000014,8796   
- worst_case,1000,0.000145,8628   
- worst_case,10000,0.002067,8624   
- worst_case,100000,0.026420,10152 
+case,entradas,tempo(s),memoria(kb)
+random_case,1,0.000002,8568
+random_case,10,0.000004,8628
+random_case,100,0.000013,8700
+random_case,1000,0.000167,8840
+random_case,10000,0.002197,8620
+random_case,100000,0.025928,10444
+best_case,1,0.000002,8900
+best_case,10,0.000003,8844 
+best_case,100,0.000014,8632
+best_case,1000,0.000232,8532
+best_case,10000,0.002189,8704
+best_case,100000,0.027219,10428
+worst_case,1,0.000002,8892
+worst_case,10,0.000003,8892
+worst_case,100,0.000014,8796
+worst_case,1000,0.000145,8628
+worst_case,10000,0.002067,8624
+worst_case,100000,0.026420,10152
