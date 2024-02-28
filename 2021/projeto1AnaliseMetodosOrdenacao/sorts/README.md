@@ -9,7 +9,7 @@ https://github.com/Ellian-aragao/IFB-EDA/tree/main/7_Sort
 just use your C compiler preferred to compile main.c and sort.c as:
 
 ```sh
-clang -O3 main.c sort.c 
+clang -O3 main.c sort.c
 ```
 
 ## running program
@@ -30,8 +30,8 @@ more than before, has to send the type of file:
 
 | type of file | argument |
 | :----------: | :------: |
-|  character   |    b     |
-|    binary    |    c     |
+|  character   |    c     |
+|    binary    |    b     |
 
 and quantity of numbers in file to be sorted
 
