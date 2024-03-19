@@ -2,7 +2,6 @@ package ellian.aragao.github.algoritmo;
 
 import java.util.Collection;
 import java.util.Objects;
-import java.util.Optional;
 
 public abstract class BaseValidation {
 
