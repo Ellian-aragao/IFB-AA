@@ -2,13 +2,14 @@ package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.models.ResultadoBusca;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 public class BuscaBinaria extends BaseValidation {
     public <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinaria(List<E> list, E itemDeBusca) {
         if (validation(list, itemDeBusca)) return Optional.empty();
-//        Collections.sort(list);
+        Collections.sort(list);
         return buscaBinariaRecursiva(list, itemDeBusca);
     }
 

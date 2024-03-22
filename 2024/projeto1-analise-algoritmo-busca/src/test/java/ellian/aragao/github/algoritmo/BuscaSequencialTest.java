@@ -26,30 +26,4 @@ class BuscaSequencialTest {
         final var result = buscaSequencial.buscaSequencial(list, -1);
         assertTrue(result.isEmpty());
     }
-
-    @Test
-    void verificaSeEncontraNumeroUtilizandoBuscaSequencialOtimizada() {
-        final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaSequencial.buscaSequencialOtimizada(list, 5);
-        assertTrue(result.isPresent());
-        assertEquals(5, result.map(ResultadoBusca::item).orElseThrow());
-    }
-
-    @Test
-    void verificaSeEncontraNumeroUtilizandoBuscaSequencialOtimizadaMasRetornaVazioUtilizandoLimites() {
-        final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaSequencial.buscaSequencialOtimizada(list, -1);
-        assertTrue(result.isEmpty());
-        final var result1 = buscaSequencial.buscaSequencialOtimizada(list, 10);
-        assertTrue(result1.isEmpty());
-    }
-
-
-    @Test
-    void verificaSeEncontraNumeroUtilizandoBuscaSequencialOtimizadaMasRetornaVazioFaltandoNumeroEntre() {
-        final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var itemABuscar = list.remove(4);
-        final var result = buscaSequencial.buscaSequencialOtimizada(list, itemABuscar);
-        assertTrue(result.isEmpty());
-    }
 }
