@@ -2,7 +2,7 @@ package ellian.aragao.github.algoritmo;
 
 import java.util.*;
 
-public class BuscaSequencial extends BaseValidation{
+public class BuscaSequencial extends BaseValidation {
     public <E> Optional<E> buscaSequencial(Collection<E> collection, E itemDeBusca) {
         if (validation(collection, itemDeBusca)) return Optional.empty();
 

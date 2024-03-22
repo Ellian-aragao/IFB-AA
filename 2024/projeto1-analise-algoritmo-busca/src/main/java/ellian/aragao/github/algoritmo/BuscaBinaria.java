@@ -7,7 +7,7 @@ import java.util.Optional;
 public class BuscaBinaria extends BaseValidation {
     public <E extends Comparable<E>> Optional<E> buscaBinaria(List<E> list, E itemDeBusca) {
         if (validation(list, itemDeBusca)) return Optional.empty();
-        Collections.sort(list);
+//        Collections.sort(list);
         return buscaBinariaRecursiva(list, itemDeBusca);
     }
 
