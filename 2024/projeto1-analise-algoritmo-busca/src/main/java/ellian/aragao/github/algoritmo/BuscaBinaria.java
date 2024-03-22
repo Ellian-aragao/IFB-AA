@@ -13,7 +13,8 @@ public class BuscaBinaria extends BaseValidation {
         return buscaBinariaRecursiva(list, itemDeBusca);
     }
 
-    private <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaRecursiva(List<E> list, E itemDeBusca) {
+    private <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaRecursiva(List<E> list,
+                                                                                                 E itemDeBusca) {
         final var firstItem = list.getFirst();
         final var lastItem = list.getLast();
         if (itemDeBusca.compareTo(firstItem) < 0 || itemDeBusca.compareTo(lastItem) > 0) return Optional.empty();

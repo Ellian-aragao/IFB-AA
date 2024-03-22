@@ -2,43 +2,31 @@ package ellian.aragao.github;
 
 import ellian.aragao.github.algoritmo.BuscaBinaria;
 import ellian.aragao.github.algoritmo.BuscaSequencial;
+import ellian.aragao.github.algoritmo.BuscaSequencialOtimizada;
+import ellian.aragao.github.gerador.GeradorDeNumeros;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.LongStream;
+import java.util.List;
 
 public class Main {
     private static final BuscaSequencial buscaSequencial = new BuscaSequencial();
+    private static final BuscaSequencialOtimizada buscaSequencialOtimizada = new BuscaSequencialOtimizada();
     private static final BuscaBinaria buscaBinaria = new BuscaBinaria();
-    private static final long LIST_SIZE_LONG = 100_000_000L;
-    private static final int LIST_SIZE_INT = 100_000_000;
+    private static final GeradorDeNumeros geradorDeNumeros = new GeradorDeNumeros();
+
 
     public static void main(String[] args) {
-        final var listStream = inicializaListaOrdenada();
+        final var listStream = geradorDeNumeros.inicializaListaOrdenada();
         executarBusca(listStream, 90_000_000L);
     }
 
     private static <E extends Comparable<E>> void executarBusca(List<E> lista, E item) {
+        long tempoInicial = System.nanoTime();
         final var itemEncontradoOpt = buscaBinaria.buscaBinaria(lista, item);
         itemEncontradoOpt.ifPresentOrElse(itemEncontrado ->
                         System.out.printf("item encontrado %s\n", itemEncontrado),
                 () -> System.out.println("Item Não encontrado"));
+        long tempoFinal = System.nanoTime();
+        System.out.printf("deltaTime: %d\n", tempoFinal - tempoInicial);
     }
 
-    private static List<Long> inicializaListaOrdenada() {
-        return LongStream.range(0, LIST_SIZE_LONG).boxed().collect(Collectors.toList());
-    }
-
-    private static List<Long> inicializaListaAleatoria() {
-        final var random = new Random();
-        final var lista = new ArrayList<Long>(LIST_SIZE_INT);
-        for (long i = 0; i < LIST_SIZE_LONG; i++) lista.add(random.nextLong());
-        return lista;
-    }
-
-    private static List<Long> inicializaListaDescrecente() {
-        final var lista = inicializaListaOrdenada();
-        lista.sort(Comparator.reverseOrder());
-        return lista;
-    }
 }
