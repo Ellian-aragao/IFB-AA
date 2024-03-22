@@ -16,11 +16,13 @@ public class Main {
 
     public static void main(String[] args) {
         final var listStream = geradorDeNumeros.inicializaListaOrdenada();
+        final var listStream1 = geradorDeNumeros.inicializaListaAleatoria();
+        final var listStream2 = geradorDeNumeros.inicializaListaDescrecente();
         executarBusca(listStream, 90_000_000L);
     }
 
     private static <E extends Comparable<E>> void executarBusca(List<E> lista, E item) {
-        final var itemEncontradoOpt = buscaSequencial.buscaSequencial(lista, item);
+        final var itemEncontradoOpt = buscaBinaria.buscaBinariaOrdenada(lista, item);
         itemEncontradoOpt.ifPresentOrElse(itemEncontrado ->
                         System.out.printf("Item encontrado: %s%s", itemEncontrado, System.lineSeparator()),
                 () -> System.out.println("Item Não encontrado"));
