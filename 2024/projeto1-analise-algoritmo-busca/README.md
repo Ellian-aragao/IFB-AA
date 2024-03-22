@@ -30,6 +30,7 @@ Sistema para interpretação de strings para geração de relatório.
 - [Maven](https://maven.apache.org/)
 - [JDK 21 LTS](https://adoptium.net/)
 
+> JDK: adoptopenjdk-21.0.2+13.0.LTS
 #### 🎲 Rodando o projeto backend
 
 ```bash

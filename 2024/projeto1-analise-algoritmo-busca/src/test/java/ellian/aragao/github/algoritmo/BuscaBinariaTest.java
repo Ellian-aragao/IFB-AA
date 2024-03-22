@@ -1,5 +1,6 @@
 package ellian.aragao.github.algoritmo;
 
+import ellian.aragao.github.models.ResultadoBusca;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Collectors;
@@ -15,7 +16,7 @@ class BuscaBinariaTest {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
         final var result = buscaBinaria.buscaBinaria(list, 5);
         assertTrue(result.isPresent());
-        assertEquals(5, result.get());
+        assertEquals(5, result.map(ResultadoBusca::item).orElseThrow());
     }
 
     @Test
@@ -23,7 +24,7 @@ class BuscaBinariaTest {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
         final var result = buscaBinaria.buscaBinaria(list, 9);
         assertTrue(result.isPresent());
-        assertEquals(9, result.get());
+        assertEquals(9, result.map(ResultadoBusca::item).orElseThrow());
     }
 
     @Test
@@ -31,7 +32,7 @@ class BuscaBinariaTest {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
         final var result = buscaBinaria.buscaBinaria(list, 0);
         assertTrue(result.isPresent());
-        assertEquals(0, result.get());
+        assertEquals(0, result.map(ResultadoBusca::item).orElseThrow());
     }
 
 
