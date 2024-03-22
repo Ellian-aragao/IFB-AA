@@ -3,9 +3,7 @@ package ellian.aragao.github;
 import ellian.aragao.github.algoritmo.BuscaBinaria;
 import ellian.aragao.github.algoritmo.BuscaSequencial;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
@@ -21,7 +19,7 @@ public class Main {
     }
 
     private static <E extends Comparable<E>> void executarBusca(List<E> lista, E item) {
-        final var itemEncontradoOpt = buscaSequencial.buscaSequencial(lista, item);
+        final var itemEncontradoOpt = buscaBinaria.buscaBinaria(lista, item);
         itemEncontradoOpt.ifPresentOrElse(itemEncontrado ->
                         System.out.printf("item encontrado %s\n", itemEncontrado),
                 () -> System.out.println("Item Não encontrado"));
@@ -35,6 +33,12 @@ public class Main {
         final var random = new Random();
         final var lista = new ArrayList<Long>(LIST_SIZE_INT);
         for (long i = 0; i < LIST_SIZE_LONG; i++) lista.add(random.nextLong());
+        return lista;
+    }
+
+    private static List<Long> inicializaListaDescrecente() {
+        final var lista = inicializaListaOrdenada();
+        lista.sort(Comparator.reverseOrder());
         return lista;
     }
 }
