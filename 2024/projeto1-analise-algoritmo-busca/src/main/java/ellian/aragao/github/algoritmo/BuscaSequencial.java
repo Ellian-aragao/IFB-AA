@@ -11,7 +11,7 @@ public class BuscaSequencial extends BaseValidation {
         long index = 0;
         for (E proximoItem : collection) {
             if (proximoItem.equals(itemDeBusca)) {
-                return Optional.of(ResultadoBusca.of(index, proximoItem));
+                return Optional.of(ResultadoBusca.of(index, proximoItem, index + 1));
             }
             index++;
         }

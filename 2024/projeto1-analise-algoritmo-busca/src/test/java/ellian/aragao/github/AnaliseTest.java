@@ -20,7 +20,7 @@ public class AnaliseTest {
     @Test
     void testeDeEntradasOrdenada() {
         final var listStream = LongStream.range(0, 10_000_000L).boxed().collect(Collectors.toList());
-        final var itemEncontradoOpt = buscaBinaria.buscaBinaria(listStream, 9_000_000L);
+        final var itemEncontradoOpt = buscaBinaria.buscaBinariaOrdenada(listStream, 9_000_000L);
         assertTrue(itemEncontradoOpt.isPresent());
     }
 }

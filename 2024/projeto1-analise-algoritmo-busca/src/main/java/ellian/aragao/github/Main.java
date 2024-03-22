@@ -20,13 +20,9 @@ public class Main {
     }
 
     private static <E extends Comparable<E>> void executarBusca(List<E> lista, E item) {
-        long tempoInicial = System.nanoTime();
-        final var itemEncontradoOpt = buscaBinaria.buscaBinaria(lista, item);
+        final var itemEncontradoOpt = buscaSequencial.buscaSequencial(lista, item);
         itemEncontradoOpt.ifPresentOrElse(itemEncontrado ->
-                        System.out.printf("item encontrado %s\n", itemEncontrado),
+                        System.out.printf("Item encontrado: %s%s", itemEncontrado, System.lineSeparator()),
                 () -> System.out.println("Item Não encontrado"));
-        long tempoFinal = System.nanoTime();
-        System.out.printf("deltaTime: %d\n", tempoFinal - tempoInicial);
     }
-
 }
