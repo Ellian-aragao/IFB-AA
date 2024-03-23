@@ -1,9 +1,9 @@
 <h1 align="center">
-  Alticci Sequence
+  Análise de algoritmos de busca
 </h1>
 
 <h4 align="center">
-	🚧 Concluído 🚧
+	🚧 Em Andamento 🚧
 </h4>
 
 # Tabela de conteúdos
