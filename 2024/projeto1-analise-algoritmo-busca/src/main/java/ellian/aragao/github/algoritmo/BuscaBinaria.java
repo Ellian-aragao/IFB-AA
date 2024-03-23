@@ -7,16 +7,17 @@ import java.util.List;
 import java.util.Optional;
 
 public class BuscaBinaria extends BaseValidation {
-    public <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaNaoOrdenada(List<E> list, E itemDeBusca) {
+    public <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaComSort(List<E> list, E itemDeBusca) {
         if (validation(list, itemDeBusca)) return Optional.empty();
         Collections.sort(list);
         return buscaBinariaRecursiva(list, itemDeBusca);
     }
 
-    public <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaOrdenada(List<E> list, E itemDeBusca) {
+    public <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaSemSort(List<E> list, E itemDeBusca) {
         if (validation(list, itemDeBusca)) return Optional.empty();
         return buscaBinariaRecursiva(list, itemDeBusca);
     }
+
     private <E extends Comparable<E>> Optional<ResultadoBusca<Integer, E>> buscaBinariaRecursiva(List<E> list,
                                                                                                  E itemDeBusca) {
         return buscaBinariaRecursiva(list,itemDeBusca, 1L);

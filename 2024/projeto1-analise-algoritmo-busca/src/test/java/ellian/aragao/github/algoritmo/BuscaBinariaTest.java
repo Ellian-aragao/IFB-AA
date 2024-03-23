@@ -14,7 +14,7 @@ class BuscaBinariaTest {
     @Test
     void verificaSeEncontraNumeroUtilizandoBuscaBinaria() {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaBinaria.buscaBinariaOrdenada(list, 5);
+        final var result = buscaBinaria.buscaBinariaSemSort(list, 5);
         assertTrue(result.isPresent());
         assertEquals(5, result.map(ResultadoBusca::item).orElseThrow());
     }
@@ -22,7 +22,7 @@ class BuscaBinariaTest {
     @Test
     void verificaSeEncontraNumeroUtilizandoBuscaBinariaLimiteSuperior() {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaBinaria.buscaBinariaOrdenada(list, 9);
+        final var result = buscaBinaria.buscaBinariaSemSort(list, 9);
         assertTrue(result.isPresent());
         assertEquals(9, result.map(ResultadoBusca::item).orElseThrow());
     }
@@ -30,7 +30,7 @@ class BuscaBinariaTest {
     @Test
     void verificaSeEncontraNumeroUtilizandoBuscaBinariaLimiteInferior() {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaBinaria.buscaBinariaOrdenada(list, 0);
+        final var result = buscaBinaria.buscaBinariaSemSort(list, 0);
         assertTrue(result.isPresent());
         assertEquals(0, result.map(ResultadoBusca::item).orElseThrow());
     }
@@ -39,7 +39,7 @@ class BuscaBinariaTest {
     @Test
     void verificaSeEncontraNumeroUtilizandoBuscaBinariaMasRetornaVazio() {
         final var list = IntStream.range(0, 10).boxed().collect(Collectors.toList());
-        final var result = buscaBinaria.buscaBinariaOrdenada(list, -1);
+        final var result = buscaBinaria.buscaBinariaSemSort(list, -1);
         assertTrue(result.isEmpty());
     }
 }

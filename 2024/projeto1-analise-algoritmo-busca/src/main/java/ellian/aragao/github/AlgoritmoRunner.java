@@ -60,20 +60,20 @@ public class AlgoritmoRunner {
         final var itensDeBuscaIniciais = selecionadorDeNumeros.selecionarItensIniciais(listasDeItens);
         itensDeBuscaIniciais.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
         itensDeBuscaIniciais.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaIniciais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaNaoOrdenada(listasDeItens, itemDeBusca));
+        itensDeBuscaIniciais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
     }
 
     private static void executarBuscaDeItensMedianos(List<Long> listasDeItens) {
         final var itensDeBuscaMedianos = selecionadorDeNumeros.selecionarItensMedianos(listasDeItens);
         itensDeBuscaMedianos.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
         itensDeBuscaMedianos.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaMedianos.forEach(itemDeBusca -> buscaBinaria.buscaBinariaNaoOrdenada(listasDeItens, itemDeBusca));
+        itensDeBuscaMedianos.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
     }
 
     private static void executarBuscaDeItensFinais(List<Long> listasDeItens) {
         final var itensDeBuscaFinais = selecionadorDeNumeros.selecionarItensFinais(listasDeItens);
         itensDeBuscaFinais.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
         itensDeBuscaFinais.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaFinais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaNaoOrdenada(listasDeItens, itemDeBusca));
+        itensDeBuscaFinais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
     }
 }
