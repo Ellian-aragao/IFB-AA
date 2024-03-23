@@ -1,5 +1,6 @@
-package ellian.aragao.github.gerador;
+package ellian.aragao.github.utils;
 
+import java.security.InvalidParameterException;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
@@ -9,9 +10,7 @@ public class GeradorDeNumeros {
 
     public GeradorDeNumeros(int listSize) {
         listSizeInt = listSize;
-    }
-    public GeradorDeNumeros() {
-        listSizeInt = 100_000_000;
+        if (listSize <= 0) throw new InvalidParameterException("Tamanho da lista não dever ser menor que zero");
     }
 
     public List<Long> inicializaListaOrdenada() {
