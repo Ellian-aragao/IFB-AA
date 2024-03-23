@@ -5,7 +5,12 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class SelecionadorDeNumeros {
-    private final int TAMANHO_DOS_DADOS_DE_CONSULTA = 50;
+    private final int TAMANHO_DOS_DADOS_DE_CONSULTA;
+
+    public SelecionadorDeNumeros(int tamanhoDosDadosDeConsulta) {
+        TAMANHO_DOS_DADOS_DE_CONSULTA = tamanhoDosDadosDeConsulta;
+    }
+
     public <T> List<T> selecionarItensIniciais(List<T> listaDeItens) {
         int tamanhoTotal = listaDeItens.size();
         int limiteSuperior = tamanhoTotal / 3;
