@@ -7,7 +7,9 @@ import java.util.stream.LongStream;
 
 public class GeradorDeNumeros {
     public List<Long> inicializaListaOrdenada(int quantidadeDeItens) {
-        return LongStream.range(0, quantidadeDeItens).boxed().collect(Collectors.toList());
+        final var lista = new ArrayList<Long>(quantidadeDeItens);
+        for (long i = 0; i < quantidadeDeItens; i++) lista.add(i);
+        return lista;
     }
 
     public List<Long> inicializaListaAleatoria(int quantidadeDeItens) {

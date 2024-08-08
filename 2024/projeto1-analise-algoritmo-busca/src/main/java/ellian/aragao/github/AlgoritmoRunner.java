@@ -7,15 +7,14 @@ import ellian.aragao.github.utils.GeradorDeNumeros;
 import ellian.aragao.github.utils.SelecionadorDeNumeros;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class AlgoritmoRunner {
-
     private static final BuscaSequencial buscaSequencial = new BuscaSequencial();
     private static final BuscaSequencialOtimizada buscaSequencialOtimizada = new BuscaSequencialOtimizada();
     private static final BuscaBinaria buscaBinaria = new BuscaBinaria();
     private static final SelecionadorDeNumeros selecionadorDeNumeros = new SelecionadorDeNumeros(50);
     private static final GeradorDeNumeros geradorDeNumeros = new GeradorDeNumeros();
-    private static final List<Integer> tamanhoDasEntradas = List.of(10_000, 100_000, 1_000_000, 10_000_000);
 
     public static void run() {
         entrada10_000();
@@ -58,22 +57,40 @@ public class AlgoritmoRunner {
 
     private static void executarBuscaDeItensIniciais(List<Long> listasDeItens) {
         final var itensDeBuscaIniciais = selecionadorDeNumeros.selecionarItensIniciais(listasDeItens);
-        itensDeBuscaIniciais.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
-        itensDeBuscaIniciais.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaIniciais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
+        executarBuscas(listasDeItens, itensDeBuscaIniciais);
     }
 
     private static void executarBuscaDeItensMedianos(List<Long> listasDeItens) {
         final var itensDeBuscaMedianos = selecionadorDeNumeros.selecionarItensMedianos(listasDeItens);
-        itensDeBuscaMedianos.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
-        itensDeBuscaMedianos.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaMedianos.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
+        executarBuscas(listasDeItens, itensDeBuscaMedianos);
     }
 
     private static void executarBuscaDeItensFinais(List<Long> listasDeItens) {
         final var itensDeBuscaFinais = selecionadorDeNumeros.selecionarItensFinais(listasDeItens);
-        itensDeBuscaFinais.forEach(itemDeBusca -> buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca));
-        itensDeBuscaFinais.forEach(itemDeBusca -> buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca));
-        itensDeBuscaFinais.forEach(itemDeBusca -> buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca));
+        executarBuscas(listasDeItens, itensDeBuscaFinais);
+    }
+
+    private static void executarBuscas(List<Long> listasDeItens, List<Long> itensDeBuscaIniciais) {
+        buscaSequencial(listasDeItens, itensDeBuscaIniciais);
+        buscaSequencialOtimizada(listasDeItens, itensDeBuscaIniciais);
+        buscaBinaria(listasDeItens, itensDeBuscaIniciais);
+    }
+
+    private static void buscaBinaria(List<Long> listasDeItens, List<Long> itensDeBusca) {
+        for (var itemDeBusca: itensDeBusca){
+            buscaBinaria.buscaBinariaComSort(listasDeItens, itemDeBusca);
+        }
+    }
+
+    private static void buscaSequencialOtimizada(List<Long> listasDeItens, List<Long> itensDeBusca) {
+        for (var itemDeBusca: itensDeBusca){
+            buscaSequencialOtimizada.buscaSequencialOtimizadaComSort(listasDeItens, itemDeBusca);
+        }
+    }
+
+    private static void buscaSequencial(List<Long> listasDeItens, List<Long> itensDeBusca) {
+        for (var itemDeBusca: itensDeBusca){
+            buscaSequencial.buscaSequencial(listasDeItens, itemDeBusca);
+        }
     }
 }
