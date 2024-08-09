@@ -88,27 +88,6 @@ public class AlgoritmoRunner {
         executarBuscaDeItensFinais(listasDeItens);
     }
 
-    private static void busca100_000(List<Long> listasDeItens) {
-        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(100_000);
-        executarBuscaDeItensIniciais(listasDeItens);
-        executarBuscaDeItensMedianos(listasDeItens);
-        executarBuscaDeItensFinais(listasDeItens);
-    }
-
-    private static void busca1_000_000(List<Long> listasDeItens) {
-        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(1_000_000);
-        executarBuscaDeItensIniciais(listasDeItens);
-        executarBuscaDeItensMedianos(listasDeItens);
-        executarBuscaDeItensFinais(listasDeItens);
-    }
-
-    private static void busca10_000_000(List<Long> listasDeItens) {
-        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(10_000_000);
-        executarBuscaDeItensIniciais(listasDeItens);
-        executarBuscaDeItensMedianos(listasDeItens);
-        executarBuscaDeItensFinais(listasDeItens);
-    }
-
     private static void executarBuscaDeItensIniciais(List<Long> listasDeItens) {
         final var itensDeBuscaIniciais = selecionadorDeNumeros.selecionarItensIniciais(listasDeItens);
         executarBuscas(listasDeItens, itensDeBuscaIniciais);
