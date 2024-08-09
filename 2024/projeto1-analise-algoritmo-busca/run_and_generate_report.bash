@@ -3,8 +3,8 @@
 number_of_reports=$1
 path_doc=$(pwd)"/doc"
 path_jfr=$path_doc/jfr
-MAVEN_HOME=/home/ellian/.asdf/installs/maven/3.9.8
-JAVA_HOME=/home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS
+MAVEN_HOME=~/.asdf/installs/maven/3.9.8
+JAVA_HOME=~/.asdf/installs/java/temurin-21.0.4+7.0.LTS
 
 check_argument() {
   if [ -z "$number_of_reports" ]; then
