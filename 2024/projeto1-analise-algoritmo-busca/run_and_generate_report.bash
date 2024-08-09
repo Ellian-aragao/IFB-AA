@@ -42,7 +42,7 @@ build_project() {
 run_project_iteration() {
   iteration=$1
   file_report_name=$path_jfr/jfr_$(date "+%Y-%m-%dT%H:%M:%S").jfr
-  java_runner_command="$JAVA_HOME/bin/java -Xms8G -Xmx16G -XX:StartFlightRecording=duration=3600s,filename=$file_report_name -jar target/projeto1-analise-algoritmo-busca-1.0-SNAPSHOT.jar"
+  java_runner_command="$JAVA_HOME/bin/java -Xms8G -Xmx16G -XX:StartFlightRecording=duration=86400s,filename=$file_report_name -jar target/projeto1-analise-algoritmo-busca-1.0-SNAPSHOT.jar"
   echo "Gerando relatório $iteration"
   echo "Rodando comando: sudo nice -n -20 $java_runner_command"
   sudo nice -n -20 $java_runner_command
