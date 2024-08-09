@@ -5,10 +5,11 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class SelecionadorDeNumeros {
-    private final int TAMANHO_DOS_DADOS_DE_CONSULTA;
+    private int tamanhoDosDadosDeConsulta = 10;
 
-    public SelecionadorDeNumeros(int tamanhoDosDadosDeConsulta) {
-        TAMANHO_DOS_DADOS_DE_CONSULTA = tamanhoDosDadosDeConsulta;
+    public SelecionadorDeNumeros tamanhoDosDadosDeConsulta(int tamanhoDosDadosDeConsulta) {
+        this.tamanhoDosDadosDeConsulta = tamanhoDosDadosDeConsulta;
+        return this;
     }
 
     public <T> List<T> selecionarItensIniciais(List<T> listaDeItens) {
@@ -32,7 +33,7 @@ public class SelecionadorDeNumeros {
 
     private <T> List<T> selecionarItens(List<T> listaDeItens, Integer limiteInferior, Integer limiteSuperior) {
         final var random = new Random();
-        return IntStream.range(0, TAMANHO_DOS_DADOS_DE_CONSULTA)
+        return IntStream.range(0, tamanhoDosDadosDeConsulta)
                 .boxed()
                 .map(ignore -> random.nextInt(limiteInferior, limiteSuperior))
                 .map(listaDeItens::get)

@@ -13,7 +13,7 @@ public class AlgoritmoRunner {
     private static final BuscaSequencial buscaSequencial = new BuscaSequencial();
     private static final BuscaSequencialOtimizada buscaSequencialOtimizada = new BuscaSequencialOtimizada();
     private static final BuscaBinaria buscaBinaria = new BuscaBinaria();
-    private static final SelecionadorDeNumeros selecionadorDeNumeros = new SelecionadorDeNumeros(50);
+    private static final SelecionadorDeNumeros selecionadorDeNumeros = new SelecionadorDeNumeros();
     private static final GeradorDeNumeros geradorDeNumeros = new GeradorDeNumeros();
 
     public static void run() {
@@ -50,6 +50,54 @@ public class AlgoritmoRunner {
     }
 
     private static void executaBuscasNaLista(List<Long> listasDeItens) {
+        busca10(listasDeItens);
+        busca100(listasDeItens);
+        busca1_000(listasDeItens);
+        busca10_000(listasDeItens);
+        busca100_000(listasDeItens);
+        busca1_000_000(listasDeItens);
+        busca10_000_000(listasDeItens);
+    }
+
+    private static void busca10(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(10);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+
+    private static void busca100(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(100);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+    private static void busca1_000(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(1_000);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+    private static void busca10_000(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(10_000);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+    private static void busca100_000(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(100_000);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+    private static void busca1_000_000(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(1_000_000);
+        executarBuscaDeItensIniciais(listasDeItens);
+        executarBuscaDeItensMedianos(listasDeItens);
+        executarBuscaDeItensFinais(listasDeItens);
+    }
+    private static void busca10_000_000(List<Long> listasDeItens) {
+        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(10_000_000);
         executarBuscaDeItensIniciais(listasDeItens);
         executarBuscaDeItensMedianos(listasDeItens);
         executarBuscaDeItensFinais(listasDeItens);
