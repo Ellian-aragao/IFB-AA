@@ -55,9 +55,6 @@ public class AlgoritmoRunner {
         busca100(listasDeItens);
         busca1_000(listasDeItens);
         busca10_000(listasDeItens);
-        busca100_000(listasDeItens);
-        busca1_000_000(listasDeItens);
-        busca10_000_000(listasDeItens);
     }
 
     private static void busca10(List<Long> listasDeItens) {
