@@ -19,26 +19,26 @@ public class AlgoritmoRunner {
 
     public static void run() {
         entrada10_000();
-        entrada100_000();
-        entrada1_000_000();
-        entrada10_000_000();
+//        entrada100_000();
+//        entrada1_000_000();
+//        entrada10_000_000();
     }
 
     private static void entrada10_000() {
         AlgoritmoRunner.geraEntradasParaAlgoritmos(10_000);
     }
 
-    private static void entrada100_000() {
-        AlgoritmoRunner.geraEntradasParaAlgoritmos(100_000);
-    }
-
-    private static void entrada1_000_000() {
-        AlgoritmoRunner.geraEntradasParaAlgoritmos(1_000_000);
-    }
-
-    private static void entrada10_000_000() {
-        AlgoritmoRunner.geraEntradasParaAlgoritmos(10_000_000);
-    }
+//    private static void entrada100_000() {
+//        AlgoritmoRunner.geraEntradasParaAlgoritmos(100_000);
+//    }
+//
+//    private static void entrada1_000_000() {
+//        AlgoritmoRunner.geraEntradasParaAlgoritmos(1_000_000);
+//    }
+//
+//    private static void entrada10_000_000() {
+//        AlgoritmoRunner.geraEntradasParaAlgoritmos(10_000_000);
+//    }
 
     private static void geraEntradasParaAlgoritmos(int tamanhoEntrada) {
         final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(tamanhoEntrada);
@@ -51,10 +51,8 @@ public class AlgoritmoRunner {
     }
 
     private static void executaBuscasNaLista(List<Long> listasDeItens) {
-        busca10(listasDeItens);
+//        busca10(listasDeItens);
         busca100(listasDeItens);
-        busca1_000(listasDeItens);
-        busca10_000(listasDeItens);
     }
 
     private static void busca10(List<Long> listasDeItens) {
@@ -71,40 +69,42 @@ public class AlgoritmoRunner {
         executarBuscaDeItensFinais(listasDeItens);
     }
 
-    private static void busca1_000(List<Long> listasDeItens) {
-        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(1_000);
-        executarBuscaDeItensIniciais(listasDeItens);
-        executarBuscaDeItensMedianos(listasDeItens);
-        executarBuscaDeItensFinais(listasDeItens);
-    }
-
-    private static void busca10_000(List<Long> listasDeItens) {
-        selecionadorDeNumeros.tamanhoDosDadosDeConsulta(10_000);
-        executarBuscaDeItensIniciais(listasDeItens);
-        executarBuscaDeItensMedianos(listasDeItens);
-        executarBuscaDeItensFinais(listasDeItens);
-    }
-
     private static void executarBuscaDeItensIniciais(List<Long> listasDeItens) {
         final var itensDeBuscaIniciais = selecionadorDeNumeros.selecionarItensIniciais(listasDeItens);
+        System.out.println("Buscando itens iniciais");
         executarBuscas(listasDeItens, itensDeBuscaIniciais);
     }
 
     private static void executarBuscaDeItensMedianos(List<Long> listasDeItens) {
         final var itensDeBuscaMedianos = selecionadorDeNumeros.selecionarItensMedianos(listasDeItens);
+        System.out.println("Buscando itens medianos");
         executarBuscas(listasDeItens, itensDeBuscaMedianos);
     }
 
     private static void executarBuscaDeItensFinais(List<Long> listasDeItens) {
         final var itensDeBuscaFinais = selecionadorDeNumeros.selecionarItensFinais(listasDeItens);
+        System.out.println("Buscando itens finais");
         executarBuscas(listasDeItens, itensDeBuscaFinais);
     }
 
     private static void executarBuscas(List<Long> listasDeItens, List<Long> itensDeBuscaIniciais) {
+        var tempoInicial = System.nanoTime();
         buscaSequencial(listasDeItens, itensDeBuscaIniciais);
+        var tempoPreSort = System.nanoTime();
+        var buscaSequencial = tempoPreSort - tempoInicial;
         final var listaOrdenada = listasDeItens.stream().sorted().toList();
+        var tempoPosSort = System.nanoTime();
+        var tempoSort = tempoPosSort - tempoPreSort;
         buscaSequencialOtimizada(listaOrdenada, itensDeBuscaIniciais);
+        var tempoPosSequencialOtimizada = System.nanoTime();
+        var tempoPosOtimizada = tempoPosSequencialOtimizada - tempoPosSort;
         buscaBinaria(listaOrdenada, itensDeBuscaIniciais);
+        var tempoPosBinaria = System.nanoTime();
+        var tempoBuscaBinaria = tempoPosBinaria - tempoPosSequencialOtimizada;
+        System.out.println("busca sequencial: " + buscaSequencial);
+        System.out.println("busca sequencial otimizada: " + tempoPosOtimizada);
+        System.out.println("busca sequencial binaria: " + tempoBuscaBinaria);
+        System.out.println("tempo sort: " + tempoSort);
     }
 
     private static void buscaBinaria(List<Long> listasDeItens, List<Long> itensDeBusca) {
