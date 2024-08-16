@@ -23,7 +23,9 @@ public abstract class SqrtSort extends BaseValidation {
             final var subListaOrdenada = executeSort(collection.subList(prefixIndex, prefixIndex + intSize));
             collectionOfCollection.add(subListaOrdenada);
         }
-        collectionOfCollection.add(collection.subList(intSize * (intSize - 1) , sizeCollection - 1));
+        if (modSize > 0) {
+            collectionOfCollection.add(collection.subList(intSize * (intSize - 1) , sizeCollection - 1));
+        }
 
         while (!collectionOfCollection.isEmpty() ){
             for (var subListaOrdenada: collectionOfCollection) {
