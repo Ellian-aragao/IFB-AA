@@ -2,7 +2,7 @@ package ellian.aragao.github.algoritmo;
 
 import java.util.*;
 
-public abstract class SqrtSort extends BaseValidation {
+public abstract class SqrtSort {
 
     private <E> boolean validation(List<E> collection) {
         return Objects.isNull(collection)
@@ -41,10 +41,7 @@ public abstract class SqrtSort extends BaseValidation {
                     finalCollection.add(maior);
                 }
             }
-
         }
-
-
 
         return finalCollection;
     }
