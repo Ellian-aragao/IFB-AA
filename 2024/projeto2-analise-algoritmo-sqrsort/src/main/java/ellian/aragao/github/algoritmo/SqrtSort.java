@@ -46,5 +46,5 @@ public abstract class SqrtSort {
         return finalCollection;
     }
 
-    protected abstract <E extends Comparable<E>> List<E> executeSort(List<E> es);
+    protected abstract <E extends Comparable<E>> List<E> executeSort(List<E> list);
 }
