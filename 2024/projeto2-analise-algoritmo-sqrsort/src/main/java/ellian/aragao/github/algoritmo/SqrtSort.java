@@ -26,19 +26,21 @@ public abstract class SqrtSort {
             E menor = null;
             List<E> removerLista = null;
 
-            for (List<E> subListaOrdenada : collectionOfCollection) {
-                if (!subListaOrdenada.isEmpty()) {
-                    E atualElemento = subListaOrdenada.get(0);
-                    if (menor == null || atualElemento.compareTo(menor) < 0) {
-                        menor = atualElemento;
-                        removerLista = subListaOrdenada;
-                    }
-                }
+            for (final var subListaOrdenada : collectionOfCollection) {
+                if (subListaOrdenada.isEmpty()) break;
+
+                final var atualElemento = subListaOrdenada.getFirst();
+                if (!Objects.isNull(menor) && atualElemento.compareTo(menor) >= 0) continue;
+
+                menor = atualElemento;
+                removerLista = subListaOrdenada;
             }
-            if (menor != null) {
+
+            if (Objects.nonNull(menor)) {
                 finalCollection.add(menor);
-                removerLista.remove(0);
+                removerLista.removeFirst();
             }
+
             collectionOfCollection.removeIf(List::isEmpty);
         }
 
