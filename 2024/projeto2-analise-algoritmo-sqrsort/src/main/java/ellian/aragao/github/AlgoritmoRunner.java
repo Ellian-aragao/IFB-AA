@@ -32,7 +32,7 @@ public class AlgoritmoRunner {
 
     private static void geraEntradasParaAlgoritmos(int tamanhoEntrada) {
         final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(tamanhoEntrada);
-        final var listaDescrecente = geradorDeNumeros.inicializaListaDescrecente(tamanhoEntrada);
+        final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(tamanhoEntrada);
         final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(tamanhoEntrada);
         throw new NotImplementedException("Algorithm not implemented yet");
     }
