@@ -2,14 +2,14 @@ package ellian.aragao.github.algoritmo;
 
 import java.util.*;
 
-public abstract class SqrSort extends BaseValidation {
+public abstract class SqrtSort extends BaseValidation {
 
     private <E> boolean validation(List<E> collection) {
         return Objects.isNull(collection)
                 || collection.isEmpty();
     }
 
-    public <E extends Comparable<E>> List<E> sqrSort(List<E> collection) {
+    public <E extends Comparable<E>> List<E> sqrtSort(List<E> collection) {
         if (validation(collection)) throw new IllegalArgumentException("List cannot be null or empty");
 
         final var sizeCollection = collection.size();
@@ -31,7 +31,6 @@ public abstract class SqrSort extends BaseValidation {
                     collectionOfCollection.remove(subListaOrdenada);
                     break;
                 }
-
 
                 final var maior = subListaOrdenada.removeLast();
                 final var maiorComparacao = maior.compareTo(finalCollection.getLast());
