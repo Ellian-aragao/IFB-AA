@@ -1,9 +1,6 @@
 package ellian.aragao.github.utils;
 
-import java.security.InvalidParameterException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.LongStream;
 
 public class GeradorDeNumeros {
     public List<Long> inicializaListaOrdenada(int quantidadeDeItens) {
@@ -19,7 +16,7 @@ public class GeradorDeNumeros {
         return lista;
     }
 
-    public List<Long> inicializaListaDescrecente(int quantidadeDeItens) {
+    public List<Long> inicializaListaDecrescente(int quantidadeDeItens) {
         final var lista = new ArrayList<Long>(quantidadeDeItens);
         for (long i = quantidadeDeItens; i > 0; i--) lista.add(i);
         return lista;

@@ -6,9 +6,7 @@ import ellian.aragao.github.algoritmo.BuscaSequencialOtimizada;
 import ellian.aragao.github.utils.GeradorDeNumeros;
 import ellian.aragao.github.utils.SelecionadorDeNumeros;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class AlgoritmoRunner {
     private static final BuscaSequencial buscaSequencial = new BuscaSequencial();
@@ -42,7 +40,7 @@ public class AlgoritmoRunner {
 
     private static void geraEntradasParaAlgoritmos(int tamanhoEntrada) {
         final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(tamanhoEntrada);
-        final var listaDescrecente = geradorDeNumeros.inicializaListaDescrecente(tamanhoEntrada);
+        final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(tamanhoEntrada);
         final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(tamanhoEntrada);
 
         executaBuscasNaLista(listaOrdenada);
