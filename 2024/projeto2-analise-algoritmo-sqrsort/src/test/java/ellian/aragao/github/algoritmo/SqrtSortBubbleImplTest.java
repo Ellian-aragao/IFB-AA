@@ -22,9 +22,16 @@ class SqrtSortBubbleImplTest {
     }
 
     @Test
-    void listaDecrescenteMaiorSqrtSortBubble() {
+    void listaDecrescenteMaiorExecuteSortBubble() {
 
         final var result = sqrtSortBubbleImpl.executeSort(geradorDeNumeros.inicializaListaDecrescente(10));
+        assertEquals(List.of(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L), result);
+    }
+
+    @Test
+    void listaDecrescenteMaiorSqrtSortBubble() {
+
+        final var result = sqrtSortBubbleImpl.sqrtSort(geradorDeNumeros.inicializaListaDecrescente(10));
         assertEquals(List.of(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L), result);
     }
 

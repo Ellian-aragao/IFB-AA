@@ -30,20 +30,27 @@ public abstract class SqrtSort {
         while (!collectionOfCollection.isEmpty() ){
             for (var subListaOrdenada: collectionOfCollection) {
                 if (subListaOrdenada.isEmpty()){
-                    collectionOfCollection.remove(subListaOrdenada);
                     break;
                 }
 
                 final var maior = subListaOrdenada.removeLast();
-                final var maiorComparacao = maior.compareTo(finalCollection.getLast());
+                final var maiorComparacao = getMaiorComparacao(maior, finalCollection);
 
                 if (maiorComparacao > 0) {
                     finalCollection.add(maior);
                 }
             }
+
         }
 
         return finalCollection;
+    }
+
+    private static <E extends Comparable<E>> int getMaiorComparacao(E maior, ArrayList<E> finalCollection) {
+        if (finalCollection.isEmpty()) {
+            return 1;
+        }
+        return maior.compareTo(finalCollection.getLast());
     }
 
     protected abstract <E extends Comparable<E>> List<E> executeSort(List<E> list);
