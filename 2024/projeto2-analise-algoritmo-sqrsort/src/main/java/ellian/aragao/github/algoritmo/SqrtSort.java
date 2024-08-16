@@ -22,6 +22,7 @@ public abstract class SqrtSort {
             executeSort(subList);
             collectionOfCollection.add(subList);
         }
+
         while (!collectionOfCollection.isEmpty()) {
             E menor = null;
             List<E> removerLista = null;

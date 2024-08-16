@@ -15,30 +15,23 @@ class SqrtSortBubbleImplTest {
 
     @Test
     void listaDecrescenteSqrtSortBubble() {
-
         List<Long> listDesc = geradorDeNumeros.inicializaListaDecrescente(9);
-        System.out.println(listDesc);
         final var result = sqrtSortBubbleImpl.executeSort(listDesc);
         assertEquals(List.of(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L), result);
-        System.out.println(result);
     }
 
     @Test
     void listaDecrescenteMaiorExecuteSortBubble() {
         List<Long> listDesc = geradorDeNumeros.inicializaListaDecrescente(10);
-        System.out.println(listDesc);
         final var result = sqrtSortBubbleImpl.executeSort(listDesc);
         assertEquals(List.of(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L), result);
-        System.out.println(result);
     }
 
     @Test
     void listaDecrescenteMaiorSqrtSortBubble() {
         List<Long> listDesc = geradorDeNumeros.inicializaListaDecrescente(10);
-        System.out.println(listDesc);
         final var result = sqrtSortBubbleImpl.sqrtSort(listDesc);
         assertEquals(List.of(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L), result);
-        System.out.println(result);
     }
 
 }
