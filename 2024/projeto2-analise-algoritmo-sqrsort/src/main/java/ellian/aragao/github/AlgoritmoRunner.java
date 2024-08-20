@@ -102,91 +102,91 @@ public class AlgoritmoRunner {
 //        }
 //    }
 
-    public static class Entradas1_000_000 {
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_aleatoriaHeap(Blackhole blackhole) {
-            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(1_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaAleatoria));
-        }
-
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_crecenteHeap(Blackhole blackhole) {
-            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(1_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaOrdenada));
-        }
-
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_decrecenteHeap(Blackhole blackhole) {
-            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(1_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaDescrecente));
-        }
-
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_aleatoriaBubble(Blackhole blackhole) {
-            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(1_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaAleatoria));
-        }
-
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_crecenteBubble(Blackhole blackhole) {
-            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(1_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaOrdenada));
-        }
-
-        @Benchmark
-        @BenchmarkMode(Mode.AverageTime)
-        public static void entrada1_000_000_decrecenteBubble(Blackhole blackhole) {
-            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(1_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaDescrecente));
-        }
-    }
-
-//    public static class Entradas10_000_000 {
+//    public static class Entradas1_000_000 {
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_aleatoriaHeap(Blackhole blackhole) {
-//            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+//        public static void entrada1_000_000_aleatoriaHeap(Blackhole blackhole) {
+//            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(1_000_000);
 //            blackhole.consume(sqrtSortHeap.sqrtSort(listaAleatoria));
 //        }
 //
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_crecenteHeap(Blackhole blackhole) {
-//            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+//        public static void entrada1_000_000_crecenteHeap(Blackhole blackhole) {
+//            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(1_000_000);
 //            blackhole.consume(sqrtSortHeap.sqrtSort(listaOrdenada));
 //        }
 //
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_decrecenteHeap(Blackhole blackhole) {
-//            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+//        public static void entrada1_000_000_decrecenteHeap(Blackhole blackhole) {
+//            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(1_000_000);
 //            blackhole.consume(sqrtSortHeap.sqrtSort(listaDescrecente));
 //        }
 //
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_aleatoriaBubble(Blackhole blackhole) {
-//            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+//        public static void entrada1_000_000_aleatoriaBubble(Blackhole blackhole) {
+//            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(1_000_000);
 //            blackhole.consume(sqrtSortBubble.sqrtSort(listaAleatoria));
 //        }
 //
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_crecenteBubble(Blackhole blackhole) {
-//            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+//        public static void entrada1_000_000_crecenteBubble(Blackhole blackhole) {
+//            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(1_000_000);
 //            blackhole.consume(sqrtSortBubble.sqrtSort(listaOrdenada));
 //        }
 //
 //        @Benchmark
 //        @BenchmarkMode(Mode.AverageTime)
-//        public static void entrada10_000_000_decrecenteBubble(Blackhole blackhole) {
-//            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+//        public static void entrada1_000_000_decrecenteBubble(Blackhole blackhole) {
+//            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(1_000_000);
 //            blackhole.consume(sqrtSortBubble.sqrtSort(listaDescrecente));
 //        }
 //    }
+
+    public static class Entradas10_000_000 {
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_aleatoriaHeap(Blackhole blackhole) {
+            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+            blackhole.consume(sqrtSortHeap.sqrtSort(listaAleatoria));
+        }
+
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_crecenteHeap(Blackhole blackhole) {
+            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+            blackhole.consume(sqrtSortHeap.sqrtSort(listaOrdenada));
+        }
+
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_decrecenteHeap(Blackhole blackhole) {
+            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+            blackhole.consume(sqrtSortHeap.sqrtSort(listaDescrecente));
+        }
+
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_aleatoriaBubble(Blackhole blackhole) {
+            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+            blackhole.consume(sqrtSortBubble.sqrtSort(listaAleatoria));
+        }
+
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_crecenteBubble(Blackhole blackhole) {
+            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+            blackhole.consume(sqrtSortBubble.sqrtSort(listaOrdenada));
+        }
+
+        @Benchmark
+        @BenchmarkMode(Mode.AverageTime)
+        public static void entrada10_000_000_decrecenteBubble(Blackhole blackhole) {
+            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+            blackhole.consume(sqrtSortBubble.sqrtSort(listaDescrecente));
+        }
+    }
 }
