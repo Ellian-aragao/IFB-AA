@@ -1,0 +1,19 @@
+Entrada, Ordenação, SqrtSort Impl,  Segundos/Operação,    Margem de erro ±
+10000, Crecente, Bubble,0.003, 0.001
+10000, Decrecente, Bubble,0.004, 0.001
+10000, Aleatoria, Bubble,0.005, 0.001
+100000, Crecente, Bubble,0.107, 0.001
+100000, Decrecente, Bubble,0.145, 0.006
+100000, Aleatoria, Bubble,0.169, 0.001
+1000000, Crecente, Bubble   ,  3.967, 0.051
+1000000, Decrecente, Bubble ,  5.212, 0.093
+1000000, Aleatoria, Bubble  ,  7.680, 0.167
+10000, Crecente, Heap,00.001, 0.001
+10000, Decrecente, Heap,0.002, 0.001
+10000, Aleatoria, Heap,0.003, 0.001
+100000, Crecente, Heap,0.049, 0.001
+100000, Decrecente, Heap,0.057, 0.001
+100000, Aleatoria, Heap,0.115, 0.003
+1000000, Crecente, Heap     ,  2.340, 0.062
+1000000, Decrecente, Heap   ,  2.375, 0.088
+1000000, Aleatoria, Heap    ,  5.727, 0.394

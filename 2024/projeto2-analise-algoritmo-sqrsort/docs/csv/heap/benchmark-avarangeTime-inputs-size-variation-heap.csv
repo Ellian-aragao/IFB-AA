@@ -1,0 +1,10 @@
+Entrada, Ordenação,  Segundos/Operação,    Margem de erro ±
+$10^4$, Crecente ,00.001, 0.001
+$10^5$, Crecente ,0.049, 0.001
+$10^6$, Crecente      ,  2.340, 0.062
+$10^4$, Decrecente ,0.002, 0.001
+$10^5$, Decrecente ,0.057, 0.001
+$10^6$, Decrecente    ,  2.375, 0.088
+$10^4$, Aleatoria ,0.003, 0.001
+$10^5$, Aleatoria ,0.115, 0.003
+$10^6$, Aleatoria     ,  5.727, 0.394
