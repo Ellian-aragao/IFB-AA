@@ -1,7 +1,7 @@
-﻿Ordenação, SqrtSort Impl,  Segundos/Operação,    Margem de erro ±
-Aleatoria, Bubble,  372.811,  15.615
-Aleatoria, Heap,  310.145,  21.955
-Crecente, Bubble,  197.347,   2.223
-Crecente, Heap,  142.732,  10.224
-Decrecente, Bubble,  228.163,   6.333
-Decrecente, Heap,  150.723,  12.340
+﻿Ordenação,SqrtSortImpl,Segundos/Operação,Margem de erro ±
+Aleatoria,Bubble,372.811,15.615
+Aleatoria,Heap,310.145,21.955
+Crecente,Bubble,197.347,2.223
+Crecente,Heap,142.732,10.224
+Decrecente,Bubble,228.163,6.333
+Decrecente,Heap,150.723,12.340
