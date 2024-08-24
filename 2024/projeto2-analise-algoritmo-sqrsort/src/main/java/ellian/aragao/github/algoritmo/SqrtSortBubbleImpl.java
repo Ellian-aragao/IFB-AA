@@ -23,8 +23,8 @@ public class SqrtSortBubbleImpl implements SqrtSort {
 
         final int sizeCollection = collection.size();
         final int intSize = (int) Math.sqrt(sizeCollection);
-        final int initialCapacity = intSize + 1;
-        final var collectionOfCollection = new ArrayList<List<E>>(initialCapacity);
+        final List<E> finalCollection = new ArrayList<>(sizeCollection);
+        final List<List<E>> collectionOfCollection = new ArrayList<>();
 
         for (int i = 0; i < sizeCollection; i += intSize) {
             int fim = Math.min(i + intSize, sizeCollection);
@@ -33,34 +33,25 @@ public class SqrtSortBubbleImpl implements SqrtSort {
             collectionOfCollection.add(subList);
         }
 
-        final var finalCollection = new ArrayList<E>(sizeCollection);
+        int indexFinalCollection = sizeCollection;
+        while (--indexFinalCollection >= 0) {
+            List<E> removerLista = null;
+            E maior = null;
 
+            for (var subListaOrdenada : collectionOfCollection) {
+                if (subListaOrdenada.isEmpty()) continue;
+                if (Objects.isNull(maior)) maior = subListaOrdenada.getLast();
 
-        final var listOfMaxElements = new ArrayList<T3<E, Integer, Integer, E>>(initialCapacity);
+                final var atualElemento = subListaOrdenada.getLast();
+                if (atualElemento.compareTo(maior) >= 0) continue;
 
-        for (int i = 0; i < collectionOfCollection.size(); i++) {
-            final var subListaOrdenada = collectionOfCollection.get(i);
-            final var lastElement = subListaOrdenada.getLast();
-            final var elementAndSizeSubListAndIndexOfCollection = new T3<>(lastElement, subListaOrdenada.size(), i);
-            listOfMaxElements.add(elementAndSizeSubListAndIndexOfCollection);
-        }
+                maior = atualElemento;
+                removerLista = subListaOrdenada;
+            }
 
-        executeSort(listOfMaxElements);
-
-        for (int i = listOfMaxElements.size(); 0 < i; i--) {
-            final var elementAndSizeSubListAndIndexOfCollection = listOfMaxElements.get(i - 1);
-
-
-        }
-
-        if (Objects.nonNull(maior)) {
-            finalCollection.set(finalCollection.size() - 1, maior);
+            finalCollection.set(indexFinalCollection, maior);
             removerLista.removeLast();
         }
-
-        collectionOfCollection.removeIf(List::isEmpty);
-
-
 
         return finalCollection;
     }
