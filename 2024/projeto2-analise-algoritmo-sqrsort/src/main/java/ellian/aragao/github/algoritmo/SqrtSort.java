@@ -18,28 +18,30 @@ public abstract class SqrtSort {
 
         for (int i = 0; i < sizeCollection; i += intSize) {
             int fim = Math.min(i + intSize, sizeCollection);
-            List<E> subList = new ArrayList<>(collection.subList(i, fim));
+            List<E> subList = collection.subList(i, fim);
             executeSort(subList);
             collectionOfCollection.add(subList);
         }
 
         while (!collectionOfCollection.isEmpty()) {
-            E menor = null;
+            E maior = null;
+            var index = 0;
             List<E> removerLista = null;
 
             for (final var subListaOrdenada : collectionOfCollection) {
                 if (subListaOrdenada.isEmpty()) break;
 
-                final var atualElemento = subListaOrdenada.getFirst();
-                if (!Objects.isNull(menor) && atualElemento.compareTo(menor) >= 0) continue;
+                final var atualElemento = subListaOrdenada.getLast();
+                if (!Objects.isNull(maior) && atualElemento.compareTo(maior) <= 0) continue;
 
-                menor = atualElemento;
+                maior = atualElemento;
                 removerLista = subListaOrdenada;
             }
+            System.out.println(maior);
 
-            if (Objects.nonNull(menor)) {
-                finalCollection.add(menor);
-                removerLista.removeFirst();
+            if (Objects.nonNull(maior)) {
+                finalCollection.set(finalCollection.size() - 1, maior);
+                removerLista.removeLast();
             }
 
             collectionOfCollection.removeIf(List::isEmpty);
