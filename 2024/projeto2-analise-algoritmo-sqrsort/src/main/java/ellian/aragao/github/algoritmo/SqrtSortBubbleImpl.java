@@ -1,8 +1,7 @@
 package ellian.aragao.github.algoritmo;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class SqrtSortBubbleImpl implements SqrtSort {
     protected <E extends Comparable<E>> List<E> executeSort(List<E> list) {
@@ -23,36 +22,44 @@ public class SqrtSortBubbleImpl implements SqrtSort {
 
         final int sizeCollection = collection.size();
         final int intSize = (int) Math.sqrt(sizeCollection);
-        final List<E> finalCollection = new ArrayList<>(sizeCollection);
-        final List<List<E>> collectionOfCollection = new ArrayList<>();
+        final var collectionOfCollection = new ArrayList<List<E>>(intSize + 1);
 
         for (int i = 0; i < sizeCollection; i += intSize) {
             int fim = Math.min(i + intSize, sizeCollection);
-            List<E> subList = collection.subList(i, fim);
+            final var subList = collection.subList(i, fim);
             executeSort(subList);
             collectionOfCollection.add(subList);
         }
 
         int indexFinalCollection = sizeCollection;
-        while (--indexFinalCollection >= 0) {
-            List<E> removerLista = null;
-            E maior = null;
+        @SuppressWarnings("unchecked")
+        var finalCollection = (E[]) Array.newInstance(collection.getFirst().getClass(), sizeCollection);
 
-            for (var subListaOrdenada : collectionOfCollection) {
+        while (--indexFinalCollection >= 0) {
+            E maior = null;
+            int indexOfListToRemove = -1;
+
+            for (int i = 0; i < collectionOfCollection.size(); i++) {
+                final var subListaOrdenada = collectionOfCollection.get(i);
                 if (subListaOrdenada.isEmpty()) continue;
                 if (Objects.isNull(maior)) maior = subListaOrdenada.getLast();
 
                 final var atualElemento = subListaOrdenada.getLast();
-                if (atualElemento.compareTo(maior) >= 0) continue;
+                if (atualElemento.compareTo(maior) < 0) continue;
 
                 maior = atualElemento;
-                removerLista = subListaOrdenada;
+                indexOfListToRemove = i;
             }
 
-            finalCollection.set(indexFinalCollection, maior);
-            removerLista.removeLast();
+            finalCollection[indexFinalCollection] = maior;
+
+            if (indexOfListToRemove == -1) continue;
+            final var listToRemove = collectionOfCollection.get(indexOfListToRemove);
+            if (listToRemove.isEmpty()) continue;
+            final var listToRemoveWithoutLastElement = listToRemove.subList(0, listToRemove.size() - 1);
+            collectionOfCollection.set(indexOfListToRemove, listToRemoveWithoutLastElement);
         }
 
-        return finalCollection;
+        return List.of( finalCollection);
     }
 }
