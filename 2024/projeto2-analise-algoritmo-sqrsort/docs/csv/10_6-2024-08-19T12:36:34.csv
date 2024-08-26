@@ -1,7 +1,0 @@
-Ordenação,SqrtSortImpl,Segundos/Operação,Margem de erro ±
-Aleatoria,Bubble,7.680,0.167
-Aleatoria,Heap,5.727,0.394
-Crecente,Bubble,3.967,0.051
-Crecente,Heap,2.340,0.062
-Decrecente,Bubble,5.212,0.093
-Decrecente,Heap,2.375,0.088
