@@ -1,10 +1,11 @@
 package ellian.aragao.github.algoritmo;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class SqrtSortHeapImpl implements SqrtSort {
     protected <E extends Comparable<E>> PriorityQueue<E> generateHeap(List<E> list) {
-        final var queue =  new PriorityQueue<E>(list.size());
+        final var queue =  new PriorityQueue<E>(list.size(), Collections.reverseOrder());
         queue.addAll(list);
         return queue;
     }
@@ -23,25 +24,29 @@ public class SqrtSortHeapImpl implements SqrtSort {
             collectionOfQueues.add(queue);
         }
 
-        final var finalCollection = new ArrayList<E>(sizeCollection);
+//        final var finalCollection = new ArrayList<E>(sizeCollection + 1);
+        @SuppressWarnings("unchecked")
+        var finalCollection = (E[]) Array.newInstance(collection.getFirst().getClass(), sizeCollection);
         int indexFinalCollection = sizeCollection;
 
         final var queueOfMaxElements = generateQueueOfMaxElements(initialCapacity, collectionOfQueues);
 
         while (--indexFinalCollection >= 0) {
             final var elementAndIndexOfCollection = queueOfMaxElements.poll();
-            finalCollection.set(indexFinalCollection, elementAndIndexOfCollection.lastElement());
+//            finalCollection.set(indexFinalCollection, elementAndIndexOfCollection.lastElement());
+            finalCollection[indexFinalCollection] = elementAndIndexOfCollection.lastElement();
             final var queue = collectionOfQueues.get(elementAndIndexOfCollection.indexListOfCollections());
             if (queue.isEmpty()) continue;
             final var elementAndIndexOfCollectionReplace = new T2<>(queue.poll(), elementAndIndexOfCollection.indexListOfCollections());
             queueOfMaxElements.add(elementAndIndexOfCollectionReplace);
         }
 
-        return finalCollection;
+        return List.of(finalCollection);
+//        return finalCollection;
     }
 
     private static <E extends Comparable<E>> Queue<T2<E, Integer, E>> generateQueueOfMaxElements(int initialCapacity, List<Queue<E>> collectionOfQueues) {
-        final var queueOfMaxElements =  new PriorityQueue<T2<E, Integer, E>>(initialCapacity);
+        final var queueOfMaxElements =  new PriorityQueue<T2<E, Integer, E>>(initialCapacity, Comparator.reverseOrder());
 
         for (int i = 0; i < collectionOfQueues.size(); i++) {
             final var subListaOrdenada = collectionOfQueues.get(i);
