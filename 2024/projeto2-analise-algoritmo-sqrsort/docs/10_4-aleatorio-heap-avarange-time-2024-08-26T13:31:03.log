@@ -1,0 +1,250 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for ellian.aragao.github:projeto2-analise-algoritmo-sqrtsort:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 48, column 22
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------< ellian.aragao.github:projeto2-analise-algoritmo-sqrtsort >------
+[INFO] Building projeto2-analise-algoritmo-sqrtsort 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Deleting /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/target
+[INFO] 
+[INFO] --- dependency:3.7.0:build-classpath (build-classpath) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Dependencies classpath:
+/home/ellian/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/home/ellian/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/ellian/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/ellian/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/home/ellian/.m2/repository/org/jacoco/jacoco-maven-plugin/0.8.6/jacoco-maven-plugin-0.8.6.jar:/home/ellian/.m2/repository/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-model/3.0/maven-model-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar:/home/ellian/.m2/repository/org/apache/maven/maven-core/3.0/maven-core-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/home/ellian/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar:/home/ellian/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22.jar:/home/ellian/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar:/home/ellian/.m2/repository/org/apache/maven/shared/maven-shared-io/1.1/maven-shared-io-1.1.jar:/home/ellian/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.2/maven-artifact-manager-2.0.2.jar:/home/ellian/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-6/wagon-provider-api-1.0-alpha-6.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar:/home/ellian/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/ellian/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar:/home/ellian/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0.jar:/home/ellian/.m2/repository/org/apache/maven/reporting/maven-reporting-impl/2.1/maven-reporting-impl-2.1.jar:/home/ellian/.m2/repository/org/apache/maven/maven-project/2.0.10/maven-project-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/maven-profile/2.0.10/maven-profile-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/maven-plugin-registry/2.0.10/maven-plugin-registry-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-core/1.1.2/doxia-core-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.1.2/doxia-logging-api-1.1.2.jar:/home/ellian/.m2/repository/xerces/xercesImpl/2.8.1/xercesImpl-2.8.1.jar:/home/ellian/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/ellian/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/home/ellian/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.1.2/doxia-site-renderer-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/1.1.2/doxia-decoration-model-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.1.2/doxia-module-xhtml-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-module-fml/1.1.2/doxia-module-fml-1.1.2.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar:/home/ellian/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.jar:/home/ellian/.m2/repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar:/home/ellian/.m2/repository/commons-validator/commons-validator/1.2.0/commons-validator-1.2.0.jar:/home/ellian/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/home/ellian/.m2/repository/commons-digester/commons-digester/1.6/commons-digester-1.6.jar:/home/ellian/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/ellian/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/ellian/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.core/0.8.6/org.jacoco.core-0.8.6.jar:/home/ellian/.m2/repository/org/ow2/asm/asm/8.0.1/asm-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-commons/8.0.1/asm-commons-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-analysis/8.0.1/asm-analysis-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-tree/8.0.1/asm-tree-8.0.1.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.report/0.8.6/org.jacoco.report-0.8.6.jar
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] skip non existing resourceDirectory /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug target 21] to target/classes
+[INFO] /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/src/main/java/ellian/aragao/github/algoritmo/T2.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/src/main/java/ellian/aragao/github/algoritmo/T2.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] skip non existing resourceDirectory /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug target 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ellian.aragao.github.algoritmo.SqrtSortBubbleImplTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in ellian.aragao.github.algoritmo.SqrtSortBubbleImplTest
+[INFO] Running ellian.aragao.github.algoritmo.SqrtSortHeapImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in ellian.aragao.github.algoritmo.SqrtSortHeapImplTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ projeto2-analise-algoritmo-sqrtsort ---
+[INFO] Building jar: /home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort/target/projeto2-analise-algoritmo-sqrtsort-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- exec:1.6.0:java (default-cli) @ projeto2-analise-algoritmo-sqrtsort ---
+# Detecting actual CPU count: 12 detected
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entradas10_000.entrada10_000_aleatoriaHeap
+
+# Run progress: 0.00% complete, ETA 00:16:40
+# Fork: 1 of 5
+# Warmup Iteration   1: 3.112 ±(99.9%) 0.054 ms/op
+# Warmup Iteration   2: 3.254 ±(99.9%) 0.065 ms/op
+# Warmup Iteration   3: 3.285 ±(99.9%) 0.096 ms/op
+# Warmup Iteration   4: 3.085 ±(99.9%) 0.046 ms/op
+# Warmup Iteration   5: 3.188 ±(99.9%) 0.046 ms/op
+Iteration   1: 3.172 ±(99.9%) 0.049 ms/op
+Iteration   2: 3.148 ±(99.9%) 0.042 ms/op
+Iteration   3: 3.159 ±(99.9%) 0.068 ms/op
+Iteration   4: 3.160 ±(99.9%) 0.063 ms/op
+Iteration   5: 3.132 ±(99.9%) 0.057 ms/op
+
+# Run progress: 10.00% complete, ETA 00:15:03
+# Fork: 2 of 5
+# Warmup Iteration   1: 3.271 ±(99.9%) 0.096 ms/op
+# Warmup Iteration   2: 3.187 ±(99.9%) 0.057 ms/op
+# Warmup Iteration   3: 3.081 ±(99.9%) 0.038 ms/op
+# Warmup Iteration   4: 3.281 ±(99.9%) 0.062 ms/op
+# Warmup Iteration   5: 3.211 ±(99.9%) 0.058 ms/op
+Iteration   1: 3.107 ±(99.9%) 0.043 ms/op
+Iteration   2: 3.286 ±(99.9%) 0.078 ms/op
+Iteration   3: 3.268 ±(99.9%) 0.078 ms/op
+Iteration   4: 3.114 ±(99.9%) 0.050 ms/op
+Iteration   5: 3.299 ±(99.9%) 0.092 ms/op
+
+# Run progress: 20.00% complete, ETA 00:13:22
+# Fork: 3 of 5
+# Warmup Iteration   1: 3.317 ±(99.9%) 0.062 ms/op
+# Warmup Iteration   2: 3.155 ±(99.9%) 0.053 ms/op
+# Warmup Iteration   3: 3.266 ±(99.9%) 0.062 ms/op
+# Warmup Iteration   4: 3.343 ±(99.9%) 0.045 ms/op
+# Warmup Iteration   5: 3.173 ±(99.9%) 0.050 ms/op
+Iteration   1: 3.254 ±(99.9%) 0.057 ms/op
+Iteration   2: 3.354 ±(99.9%) 0.075 ms/op
+Iteration   3: 3.173 ±(99.9%) 0.051 ms/op
+Iteration   4: 3.307 ±(99.9%) 0.059 ms/op
+Iteration   5: 3.328 ±(99.9%) 0.093 ms/op
+
+# Run progress: 30.00% complete, ETA 00:11:42
+# Fork: 4 of 5
+# Warmup Iteration   1: 3.152 ±(99.9%) 0.050 ms/op
+# Warmup Iteration   2: 3.209 ±(99.9%) 0.067 ms/op
+# Warmup Iteration   3: 3.135 ±(99.9%) 0.037 ms/op
+# Warmup Iteration   4: 3.144 ±(99.9%) 0.045 ms/op
+# Warmup Iteration   5: 3.174 ±(99.9%) 0.096 ms/op
+Iteration   1: 3.149 ±(99.9%) 0.047 ms/op
+Iteration   2: 3.186 ±(99.9%) 0.044 ms/op
+Iteration   3: 3.188 ±(99.9%) 0.065 ms/op
+Iteration   4: 3.154 ±(99.9%) 0.082 ms/op
+Iteration   5: 3.107 ±(99.9%) 0.044 ms/op
+
+# Run progress: 40.00% complete, ETA 00:10:02
+# Fork: 5 of 5
+# Warmup Iteration   1: 3.183 ±(99.9%) 0.047 ms/op
+# Warmup Iteration   2: 3.110 ±(99.9%) 0.062 ms/op
+# Warmup Iteration   3: 3.054 ±(99.9%) 0.026 ms/op
+# Warmup Iteration   4: 3.226 ±(99.9%) 0.086 ms/op
+# Warmup Iteration   5: 3.149 ±(99.9%) 0.045 ms/op
+Iteration   1: 3.057 ±(99.9%) 0.038 ms/op
+Iteration   2: 3.212 ±(99.9%) 0.072 ms/op
+Iteration   3: 3.171 ±(99.9%) 0.065 ms/op
+Iteration   4: 3.061 ±(99.9%) 0.036 ms/op
+Iteration   5: 3.185 ±(99.9%) 0.067 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entradas10_000.entrada10_000_aleatoriaHeap":
+  3.189 ±(99.9%) 0.060 ms/op [Average]
+  (min, avg, max) = (3.057, 3.189, 3.354), stdev = 0.081
+  CI (99.9%): [3.129, 3.250] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto2-analise-algoritmo-sqrsort
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 12 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.entrada1_000_000_aleatoriaHeap
+
+# Run progress: 50.00% complete, ETA 00:08:21
+# Fork: 1 of 5
+# Warmup Iteration   1: 2209.803 ±(99.9%) 101.229 ms/op
+# Warmup Iteration   2: 2153.481 ±(99.9%) 82.306 ms/op
+# Warmup Iteration   3: 2151.654 ±(99.9%) 119.523 ms/op
+# Warmup Iteration   4: 2079.360 ±(99.9%) 109.800 ms/op
+# Warmup Iteration   5: 2066.660 ±(99.9%) 88.730 ms/op
+Iteration   1: 2189.362 ±(99.9%) 112.554 ms/op
+Iteration   2: 2164.501 ±(99.9%) 116.782 ms/op
+Iteration   3: 2242.518 ±(99.9%) 147.106 ms/op
+Iteration   4: 2159.465 ±(99.9%) 130.100 ms/op
+Iteration   5: 2113.199 ±(99.9%) 113.123 ms/op
+
+# Run progress: 60.00% complete, ETA 00:07:01
+# Fork: 2 of 5
+# Warmup Iteration   1: 2103.513 ±(99.9%) 106.463 ms/op
+# Warmup Iteration   2: 2036.192 ±(99.9%) 78.430 ms/op
+# Warmup Iteration   3: 2177.624 ±(99.9%) 127.343 ms/op
+# Warmup Iteration   4: 2170.458 ±(99.9%) 122.216 ms/op
+# Warmup Iteration   5: 2209.249 ±(99.9%) 113.851 ms/op
+Iteration   1: 2259.418 ±(99.9%) 90.463 ms/op
+Iteration   2: 2150.454 ±(99.9%) 73.805 ms/op
+Iteration   3: 2090.479 ±(99.9%) 68.823 ms/op
+Iteration   4: 2109.503 ±(99.9%) 91.829 ms/op
+Iteration   5: 2157.520 ±(99.9%) 123.827 ms/op
+
+# Run progress: 70.00% complete, ETA 00:05:25
+# Fork: 3 of 5
+# Warmup Iteration   1: 2258.477 ±(99.9%) 92.969 ms/op
+# Warmup Iteration   2: 2184.513 ±(99.9%) 107.962 ms/op
+# Warmup Iteration   3: 2143.620 ±(99.9%) 75.233 ms/op
+# Warmup Iteration   4: 2221.327 ±(99.9%) 114.954 ms/op
+# Warmup Iteration   5: 2103.953 ±(99.9%) 136.605 ms/op
+Iteration   1: 2119.361 ±(99.9%) 113.718 ms/op
+Iteration   2: 2128.015 ±(99.9%) 78.386 ms/op
+Iteration   3: 2266.873 ±(99.9%) 121.407 ms/op
+Iteration   4: 2242.239 ±(99.9%) 148.674 ms/op
+Iteration   5: 2174.054 ±(99.9%) 99.201 ms/op
+
+# Run progress: 80.00% complete, ETA 00:03:42
+# Fork: 4 of 5
+# Warmup Iteration   1: 2228.152 ±(99.9%) 127.723 ms/op
+# Warmup Iteration   2: 2122.859 ±(99.9%) 107.049 ms/op
+# Warmup Iteration   3: 2092.900 ±(99.9%) 87.397 ms/op
+# Warmup Iteration   4: 2079.434 ±(99.9%) 79.817 ms/op
+# Warmup Iteration   5: 2133.836 ±(99.9%) 88.942 ms/op
+Iteration   1: 2300.233 ±(99.9%) 114.809 ms/op
+Iteration   2: 2146.325 ±(99.9%) 105.018 ms/op
+Iteration   3: 2213.232 ±(99.9%) 84.861 ms/op
+Iteration   4: 2239.477 ±(99.9%) 142.882 ms/op
+Iteration   5: 2114.607 ±(99.9%) 113.855 ms/op
+
+# Run progress: 90.00% complete, ETA 00:01:53
+# Fork: 5 of 5
+# Warmup Iteration   1: 2043.276 ±(99.9%) 113.740 ms/op
+# Warmup Iteration   2: 2038.747 ±(99.9%) 111.983 ms/op
+# Warmup Iteration   3: 2070.743 ±(99.9%) 68.798 ms/op
+# Warmup Iteration   4: 2215.511 ±(99.9%) 155.514 ms/op
+# Warmup Iteration   5: 2134.183 ±(99.9%) 121.282 ms/op
+Iteration   1: 2124.872 ±(99.9%) 132.306 ms/op
+Iteration   2: 2111.793 ±(99.9%) 133.072 ms/op
+Iteration   3: 2046.452 ±(99.9%) 79.825 ms/op
+Iteration   4: 2096.588 ±(99.9%) 93.330 ms/op
+Iteration   5: 2138.036 ±(99.9%) 75.757 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.entrada1_000_000_aleatoriaHeap":
+  2163.943 ±(99.9%) 48.337 ms/op [Average]
+  (min, avg, max) = (2046.452, 2163.943, 2300.233), stdev = 64.528
+  CI (99.9%): [2115.607, 2212.280] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:19:09
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                   Mode  Cnt     Score    Error  Units
+AlgoritmoRunner.Entradas10_000.entrada10_000_aleatoriaHeap  avgt   25     3.189 ±  0.060  ms/op
+AlgoritmoRunner.entrada1_000_000_aleatoriaHeap              avgt   25  2163.943 ± 48.337  ms/op
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19:13 min
+[INFO] Finished at: 2024-08-26T13:50:18-03:00
+[INFO] ------------------------------------------------------------------------
