@@ -6,11 +6,11 @@ import java.util.*;
 public class SqrtSortBubbleImpl implements SqrtSort {
     protected <E extends Comparable<E>> List<E> executeSort(List<E> list) {
         for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.size(); j++) {
-                final var compare = list.get(i).compareTo(list.get(j));
+            for (int j = 1; j < list.size() - 1; j++) {
+                final var compare = list.get(j - 1).compareTo(list.get(j));
                 if (compare < 0) {
-                    final var tmp = list.get(i);
-                    list.set(i, list.get(j));
+                    final var tmp = list.get(j - 1);
+                    list.set(j - 1, list.get(j));
                     list.set(j, tmp);
                 }
             }
@@ -60,6 +60,6 @@ public class SqrtSortBubbleImpl implements SqrtSort {
             collectionOfCollection.set(indexOfListToRemove, listToRemoveWithoutLastElement);
         }
 
-        return List.of( finalCollection);
+        return List.of(finalCollection);
     }
 }
