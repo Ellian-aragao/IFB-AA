@@ -24,7 +24,6 @@ public class SqrtSortHeapImpl implements SqrtSort {
             collectionOfQueues.add(queue);
         }
 
-//        final var finalCollection = new ArrayList<E>(sizeCollection + 1);
         @SuppressWarnings("unchecked")
         var finalCollection = (E[]) Array.newInstance(collection.getFirst().getClass(), sizeCollection);
         int indexFinalCollection = sizeCollection;
@@ -33,7 +32,6 @@ public class SqrtSortHeapImpl implements SqrtSort {
 
         while (--indexFinalCollection >= 0) {
             final var elementAndIndexOfCollection = queueOfMaxElements.poll();
-//            finalCollection.set(indexFinalCollection, elementAndIndexOfCollection.lastElement());
             finalCollection[indexFinalCollection] = elementAndIndexOfCollection.lastElement();
             final var queue = collectionOfQueues.get(elementAndIndexOfCollection.indexListOfCollections());
             if (queue.isEmpty()) continue;
@@ -41,8 +39,7 @@ public class SqrtSortHeapImpl implements SqrtSort {
             queueOfMaxElements.add(elementAndIndexOfCollectionReplace);
         }
 
-        return List.of(finalCollection);
-//        return finalCollection;
+        return Arrays.asList(finalCollection);
     }
 
     private static <E extends Comparable<E>> Queue<T2<E, Integer, E>> generateQueueOfMaxElements(int initialCapacity, List<Queue<E>> collectionOfQueues) {
