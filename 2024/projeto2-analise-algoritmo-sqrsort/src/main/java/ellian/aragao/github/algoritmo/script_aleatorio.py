@@ -25,7 +25,7 @@ plt.plot(entradas, log_scores_aleatoria_bubble, marker='o', linestyle='--', colo
 plt.xlabel('Número de Entradas')
 plt.ylabel('log(milissegundos)')
 plt.xscale('log')  # Usa escala logarítmica para o eixo x
-plt.title('Comparação de Log(milissegundos) para Dados Aleatórios: Heap vs Bubble')
+plt.title('Comparação de dados do Heap e Bubble')
 
 # Adiciona a legenda
 plt.legend()

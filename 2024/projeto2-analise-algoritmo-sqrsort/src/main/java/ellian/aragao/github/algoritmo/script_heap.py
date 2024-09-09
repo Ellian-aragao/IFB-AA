@@ -20,19 +20,20 @@ log_scores_decrescente = np.log10(scores_decrescente)
 plt.figure(figsize=(12, 8))
 
 # Linha para dados aleatórios
-plt.plot(entradas, log_scores_aleatoria, marker='o', linestyle='-', color='b', label='Aleatório')
+plt.plot(entradas, scores_aleatoria, marker='o', linestyle='-', color='b', label='Aleatório')
 
 # Linha para dados crescentes
-plt.plot(entradas, log_scores_crescente, marker='o', linestyle='--', color='g', label='Crescente')
+plt.plot(entradas, scores_crescente, marker='o', linestyle='--', color='g', label='Crescente')
 
 # Linha para dados decrescentes
-plt.plot(entradas, log_scores_decrescente, marker='o', linestyle='-.', color='r', label='Decrescente')
+plt.plot(entradas, scores_decrescente, marker='o', linestyle='-.', color='r', label='Decrescente')
 
 # Define os rótulos dos eixos
 plt.xlabel('Número de Entradas')
 plt.ylabel('log(milissegundos)')
+plt.yscale('log')
 plt.xscale('log')  # Usa escala logarítmica para o eixo x
-plt.title('Gráfico de Log(milissegundos) em função do Número de Entradas')
+plt.title('Dados do Heap')
 
 # Adiciona a legenda
 plt.legend()
