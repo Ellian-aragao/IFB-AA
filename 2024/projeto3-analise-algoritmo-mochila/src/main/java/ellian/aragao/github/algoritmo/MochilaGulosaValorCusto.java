@@ -4,6 +4,7 @@ import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
 import org.apache.commons.lang.NotImplementedException;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class MochilaGulosaValorCusto implements Mochila {
@@ -38,11 +39,13 @@ public class MochilaGulosaValorCusto implements Mochila {
             }
         }
 
-        // Cálculo do valor da mochila
-        int totalValor = get_total_valor(itensNaMochila, itens);
+        final var itensFinais = new LinkedList<Item>();
+        for (int i = 0; i < itens.size(); i++) {
+            if (!itensNaMochila[i]) continue;
+            itensFinais.add(itens.get(i));
+        }
 
-        System.out.println("Total de valor: " + totalValor);
-        throw new NotImplementedException("Not implemented yet");
+        return itensFinais;
     }
 
     private static int get_total_peso(boolean[] itensNaMochila, List<Item> itens) {
