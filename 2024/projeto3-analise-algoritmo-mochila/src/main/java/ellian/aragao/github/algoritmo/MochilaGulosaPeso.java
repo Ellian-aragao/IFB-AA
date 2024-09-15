@@ -1,6 +1,8 @@
+package ellian.aragao.github.algoritmo;
+
 public class MochilaGulosaPeso {
     public static void main(String[] args) {
-        // Definição dos itens (peso e valor)
+        // Definição dos itens (weight e valor)
         Item[] itens = {
                 new Item(5, 10),
                 new Item(3, 20),
@@ -15,7 +17,7 @@ public class MochilaGulosaPeso {
         // Inicialização do conjunto de itens na mochila
         boolean[] itensNaMochila = new boolean[itens.length];
 
-        // Algoritmo guloso (priorizando pelo peso)
+        // Algoritmo guloso (priorizando pelo weight)
         for (int i = 0; i < itens.length; i++) {
             if (!itensNaMochila[i]) {
                 int totalPeso = get_total_peso(itensNaMochila, itens);

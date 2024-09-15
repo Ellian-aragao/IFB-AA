@@ -1,6 +1,8 @@
+package ellian.aragao.github.algoritmo;
+
 public class MochilaGulosaValorCusto {
     public static void main(String[] args) {
-        // Definição dos itens (peso e valor)
+        // Definição dos itens (weight e valor)
         Item[] itens = {
                 new Item(5, 10),
                 new Item(3, 20),
