@@ -1,9 +1,9 @@
 <h1 align="center">
-  Análise de algoritmos de busca
+  Análise do algoritmo de ordenação SqrtSort
 </h1>
 
 <h4 align="center">
-	🚧 Em Andamento 🚧
+	Concluído
 </h4>
 
 # Tabela de conteúdos
@@ -18,7 +18,7 @@
 
 ## 💻 Sobre o projeto
 
-Sistema para interpretação de strings para geração de relatório.
+Projeto para realizar benchmark da execução dos algoritmos de ordenação SqrtSort, variando a implementação do método interno de ordenação, sendo BubbleSort e a estrutura Heap
 
 ---
 
@@ -38,13 +38,13 @@ Sistema para interpretação de strings para geração de relatório.
 $ git clone git@github.com:Ellian-aragao/IFB-AA.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd 2024/projeto1-analise-algoritmo-busca
+$ cd 2024/projeto2-analise-algoritmo-sqrsort
 
 # Instale as dependências
 $ mvn install
 
 # Execute a aplicação
-$ mvn exec:java
+$ mvn clean package exec:java
 ```
 
 ---
