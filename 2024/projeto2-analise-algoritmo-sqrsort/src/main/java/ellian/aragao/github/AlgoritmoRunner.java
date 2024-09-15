@@ -184,59 +184,59 @@ public class AlgoritmoRunner {
    }
 
 
-    public static class Entradas10_000_000 {
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_aleatoriaHeap(Blackhole blackhole) {
-            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaAleatoria));
-        }
+   public static class Entradas10_000_000 {
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_aleatoriaHeap(Blackhole blackhole) {
+           final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+           blackhole.consume(sqrtSortHeap.sqrtSort(listaAleatoria));
+       }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_crecenteHeap(Blackhole blackhole) {
-            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaOrdenada));
-        }
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_crecenteHeap(Blackhole blackhole) {
+           final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+           blackhole.consume(sqrtSortHeap.sqrtSort(listaOrdenada));
+       }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_decrecenteHeap(Blackhole blackhole) {
-            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
-            blackhole.consume(sqrtSortHeap.sqrtSort(listaDescrecente));
-        }
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_decrecenteHeap(Blackhole blackhole) {
+           final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+           blackhole.consume(sqrtSortHeap.sqrtSort(listaDescrecente));
+       }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_aleatoriaBubble(Blackhole blackhole) {
-            final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaAleatoria));
-        }
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_aleatoriaBubble(Blackhole blackhole) {
+           final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(10_000_000);
+           blackhole.consume(sqrtSortBubble.sqrtSort(listaAleatoria));
+       }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_crecenteBubble(Blackhole blackhole) {
-            final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaOrdenada));
-        }
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_crecenteBubble(Blackhole blackhole) {
+           final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(10_000_000);
+           blackhole.consume(sqrtSortBubble.sqrtSort(listaOrdenada));
+       }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
-        public static void entrada10_000_000_decrecenteBubble(Blackhole blackhole) {
-            final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
-            blackhole.consume(sqrtSortBubble.sqrtSort(listaDescrecente));
-        }
-    }
+       @Benchmark
+       @Threads(Threads.MAX)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       public static void entrada10_000_000_decrecenteBubble(Blackhole blackhole) {
+           final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(10_000_000);
+           blackhole.consume(sqrtSortBubble.sqrtSort(listaDescrecente));
+       }
+   }
 }
