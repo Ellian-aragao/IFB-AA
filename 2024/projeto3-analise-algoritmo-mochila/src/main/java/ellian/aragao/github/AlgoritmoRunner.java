@@ -1,11 +1,11 @@
 package ellian.aragao.github;
 
-import ellian.aragao.github.utils.GeradorDeNumeros;
+import ellian.aragao.github.utils.LeitorDeArquivos;
 import org.apache.commons.lang.NotImplementedException;
 
 
 public class AlgoritmoRunner {
-    private static final GeradorDeNumeros geradorDeNumeros = new GeradorDeNumeros();
+    private static final LeitorDeArquivos LEITOR_DE_ARQUIVOS = new LeitorDeArquivos();
 
     public static void run() {
         entrada10_000();
@@ -33,9 +33,6 @@ public class AlgoritmoRunner {
     }
 
     private static void geraEntradasParaAlgoritmos(int tamanhoEntrada) {
-        final var listaOrdenada = geradorDeNumeros.inicializaListaOrdenada(tamanhoEntrada);
-        final var listaDescrecente = geradorDeNumeros.inicializaListaDecrescente(tamanhoEntrada);
-        final var listaAleatoria = geradorDeNumeros.inicializaListaAleatoria(tamanhoEntrada);
         throw new NotImplementedException("Algorithm not implemented yet");
     }
 }

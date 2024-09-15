@@ -1,4 +1,4 @@
-package ellian.aragao.github.algoritmo;
+package ellian.aragao.github.algoritmo.models;
 
 public record Item(Double weight,
                    Double value) {
