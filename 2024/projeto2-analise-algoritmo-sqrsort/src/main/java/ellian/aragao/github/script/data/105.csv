@@ -1,0 +1,7 @@
+Entrada,Algoritmo,microsegundos,MargemErro
+aleatoria,Bubble,473.859,18.126
+aleatoria,Heap,104.539,1.396
+crecente,Bubble,373.937,7.159
+crecente,Heap,77.285,1.567
+decrecente,Bubble,448.658,5.993
+decrecente,Heap,74.607,2.211
