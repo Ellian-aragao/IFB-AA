@@ -17,7 +17,7 @@ public class MochilaDinamica implements Mochila {
         var tabelaEstados = new double[itens.size() + 1][capacidadeMochila.intValue() + 1];
 
         for (int i = 0; i <= itens.size(); i++) {
-            for (int j = 0; j <= capacidadeMochila; j++) {
+            for (int j = 0; j <= capacidadeMochila.intValue(); j++) {
                 if (i == 0 || j == 0) {
                     tabelaEstados[i][j] = 0;
                 } else {
@@ -33,7 +33,19 @@ public class MochilaDinamica implements Mochila {
             }
         }
 
-        var totalValor = tabelaEstados[itens.size()][capacidadeMochila.intValue()];
-        throw new NotImplementedException("Not implemented yet");
+        for (int i = 0; i <= itens.size(); i++) {
+            for (int j = 0; j <= capacidadeMochila; j++) {
+                System.out.print(tabelaEstados[i][j] + " ");
+            }
+        }
+        List<Item> itensSelecionados = new LinkedList<>();
+        int capacidadeRestante = capacidadeMochila.intValue();
+        for (int i = itens.size(); i > 0 && capacidadeRestante > 0; i--) {
+            if (tabelaEstados[i][capacidadeRestante] != tabelaEstados[i - 1][capacidadeRestante]) {
+                itensSelecionados.add(itens.get(i - 1));
+                capacidadeRestante -= itens.get(i - 1).weight().intValue();
+            }
+        }
+        return itensSelecionados;
     }
 }

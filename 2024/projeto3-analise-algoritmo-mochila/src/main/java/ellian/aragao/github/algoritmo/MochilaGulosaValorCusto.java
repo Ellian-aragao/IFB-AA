@@ -2,7 +2,6 @@ package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
-import org.apache.commons.lang.NotImplementedException;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class MochilaGulosaValorCusto implements Mochila {
         // Algoritmo guloso (priorizando pelo valor/custo)
         for (int i = 0; i < itens.size(); i++) {
             if (!itensNaMochila[i]) {
-                int totalPeso = get_total_peso(itensNaMochila, itens);
+                int totalPeso = getTotalPeso(itensNaMochila, itens);
                 if (totalPeso + itens.get(i).weight() <= capacidadeMochila) {
                     double valorCusto = itens.get(i).value() / itens.get(i).weight();
                     boolean encontrado = false;
@@ -48,7 +47,7 @@ public class MochilaGulosaValorCusto implements Mochila {
         return itensFinais;
     }
 
-    private static int get_total_peso(boolean[] itensNaMochila, List<Item> itens) {
+    private static int getTotalPeso(boolean[] itensNaMochila, List<Item> itens) {
         int totalPeso = 0;
         for (int i = 0; i < itens.size(); i++) {
             if (itensNaMochila[i]) {
@@ -58,7 +57,7 @@ public class MochilaGulosaValorCusto implements Mochila {
         return totalPeso;
     }
 
-    private static int get_total_valor(boolean[] itensNaMochila, List<Item> itens) {
+    private static int getTotalValor(boolean[] itensNaMochila, List<Item> itens) {
         int totalValor = 0;
         for (int i = 0; i < itens.size(); i++) {
             if (itensNaMochila[i]) {
