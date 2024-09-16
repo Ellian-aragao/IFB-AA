@@ -1,22 +1,21 @@
-package ellian.aragao.github.algoritmo;
+package ellian.aragao.github.algoritmo.sort;
 
+import ellian.aragao.github.algoritmo.MochilaGulosaPeso;
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
-import ellian.aragao.github.algoritmo.sort.MochilaGulosaPeso2;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MochilaGulosaPeso2Test {
-
+class MochilaGulosaValorCusto2Test {
     @Test
     public void testMochilaComItensValidos() {
-        Item item1 = new Item( 4.0, 3.0);
-        Item item2 = new Item( 3.0, 2.0);
-        Item item3 = new Item( 2.0, 2.0);
-        Item item4 = new Item( 1.0, 1.0);
+        Item item1 = new Item(4.0, 3.0);
+        Item item2 = new Item(3.0, 2.0);
+        Item item3 = new Item(2.0, 2.0);
+        Item item4 = new Item(1.0, 1.0);
 
         double capacidade = 5.0;
 
@@ -24,7 +23,7 @@ class MochilaGulosaPeso2Test {
 
         MochilaInfo mochilaInfo = new MochilaInfo(capacidade, itens);
 
-        MochilaGulosaPeso2 mochilaGulosaPeso = new MochilaGulosaPeso2();
+        MochilaGulosaValorCusto2 mochilaGulosaPeso = new MochilaGulosaValorCusto2();
         List<Item> itensSelecionados = mochilaGulosaPeso.calculaItensParaMochila(mochilaInfo);
 
         assertEquals(2, itensSelecionados.size());

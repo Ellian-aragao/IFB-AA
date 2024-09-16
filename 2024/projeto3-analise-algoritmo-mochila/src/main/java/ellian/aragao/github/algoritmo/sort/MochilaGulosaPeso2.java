@@ -19,12 +19,15 @@ public class MochilaGulosaPeso2 implements Mochila {
             listaPeso.add(new IndexAndItem(i, itensMochila.get(i)));
         }
 
-        listaPeso.sort(Comparator.comparing(a -> a.item().weight(), Collections.reverseOrder()));
+        listaPeso.sort(Comparator.comparing(a -> a.item().weight()));
 
         final var listaFinalItens = new LinkedList<Item>();
         var pesoMochilaFinal = 0.0;
         for (int i = 0; i < itensMochila.size() && pesoMochilaFinal <= capacidadeMochila; i++) {
-            listaFinalItens.add(itensMochila.get(listaPeso.get(i).index()));
+            final var indexAndItem = listaPeso.get(i);
+            if (pesoMochilaFinal + indexAndItem.item().weight() > capacidadeMochila) continue;
+            listaFinalItens.add(itensMochila.get(indexAndItem.index()));
+            pesoMochilaFinal += indexAndItem.item().weight();
         }
 
         return listaFinalItens;

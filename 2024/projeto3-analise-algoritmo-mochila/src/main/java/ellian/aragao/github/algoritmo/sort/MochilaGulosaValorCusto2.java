@@ -23,7 +23,10 @@ public class MochilaGulosaValorCusto2 implements Mochila {
         final var listaFinalItens = new LinkedList<Item>();
         var pesoMochilaFinal = 0.0;
         for (int i = 0; i < itensMochila.size() && pesoMochilaFinal <= capacidadeMochila; i++) {
-            listaFinalItens.add(itensMochila.get(listaPeso.get(i).index()));
+            final var indexAndItem = listaPeso.get(i);
+            if (pesoMochilaFinal + indexAndItem.item().weight() > capacidadeMochila) continue;
+            listaFinalItens.add(itensMochila.get(indexAndItem.index()));
+            pesoMochilaFinal += indexAndItem.item().weight();
         }
 
         return listaFinalItens;
