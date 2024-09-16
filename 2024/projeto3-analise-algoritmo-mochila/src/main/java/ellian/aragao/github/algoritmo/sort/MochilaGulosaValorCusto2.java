@@ -1,7 +1,6 @@
 package ellian.aragao.github.algoritmo.sort;
 
 import ellian.aragao.github.algoritmo.Mochila;
-import ellian.aragao.github.algoritmo.models.IndexAndItem;
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
 

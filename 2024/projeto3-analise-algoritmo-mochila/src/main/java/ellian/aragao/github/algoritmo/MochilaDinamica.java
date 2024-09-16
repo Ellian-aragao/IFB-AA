@@ -2,10 +2,9 @@ package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
-import org.apache.commons.lang.NotImplementedException;
 
-import java.io.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MochilaDinamica implements Mochila {
 

@@ -1,11 +1,13 @@
 package ellian.aragao.github.algoritmo.sort;
 
 import ellian.aragao.github.algoritmo.Mochila;
-import ellian.aragao.github.algoritmo.models.IndexAndItem;
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MochilaGulosaPeso2 implements Mochila {
     @Override
