@@ -35,7 +35,6 @@ public class MochilaDinamica implements Mochila {
 
         for (int i = 0; i <= itens.size(); i++) {
             for (int j = 0; j <= capacidadeMochila; j++) {
-                System.out.print(tabelaEstados[i][j] + " ");
             }
         }
         List<Item> itensSelecionados = new LinkedList<>();

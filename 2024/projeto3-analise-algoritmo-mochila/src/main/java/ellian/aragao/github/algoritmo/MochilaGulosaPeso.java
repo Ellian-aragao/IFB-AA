@@ -3,6 +3,7 @@ package ellian.aragao.github.algoritmo;
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
 
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,7 +11,10 @@ public class MochilaGulosaPeso implements Mochila {
     @Override
     public List<Item> calculaItensParaMochila(MochilaInfo mochilaInfo) {
         final var itens = mochilaInfo.itens();
-        final var capacidadeMochila = mochilaInfo.capacidadeMochila();;
+        final var capacidadeMochila = mochilaInfo.capacidadeMochila();
+
+        // Ordena os itens por peso
+        itens.sort(Comparator.comparingDouble(Item::weight));
 
         boolean[] itensNaMochila = new boolean[itens.size()];
 
