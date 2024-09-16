@@ -42,7 +42,9 @@ class MochilaGulosaPeso2Test {
         final var mochilaDinamica = new MochilaGulosaPeso2();
         final var itensSelecionados = mochilaDinamica.calculaItensParaMochila(mochilaInfo);
 
+        double valorPeso = itensSelecionados.stream().mapToDouble(Item::weight).sum();
+        assertEquals(227.0, valorPeso);
         double valorTotal = itensSelecionados.stream().mapToDouble(Item::value).sum();
-        assertEquals(295.0, valorTotal);
+        assertEquals(214.0, valorTotal);
     }
 }
