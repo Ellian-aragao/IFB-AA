@@ -4,6 +4,8 @@ import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +20,7 @@ class MochilaGulosaValorCustoTest {
 
         double capacidade = 5.0;
 
-        List<Item> itens = List.of(item1, item2, item3, item4);
+        List<Item> itens = Arrays.asList(item1, item2, item3, item4);
 
         MochilaInfo mochilaInfo = new MochilaInfo(capacidade, itens);
 
@@ -29,5 +31,4 @@ class MochilaGulosaValorCustoTest {
         assertEquals(item3, itensSelecionados.get(0));
         assertEquals(item4, itensSelecionados.get(1));
     }
-
 }

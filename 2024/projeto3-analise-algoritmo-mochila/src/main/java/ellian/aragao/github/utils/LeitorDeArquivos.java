@@ -22,9 +22,9 @@ public class LeitorDeArquivos {
             String linha = null;
             while ((linha = br.readLine()) != null) {
                 var partes = linha.split(" ");
-                var peso = Double.parseDouble(partes[0]);
-                var valor = Double.parseDouble(partes[1]);
-                items.add(new Item(peso, valor));
+                var value = Double.parseDouble(partes[0]);
+                var weight = Double.parseDouble(partes[1]);
+                items.add(new Item(weight, value));
             }
 
             return new MochilaInfo(weightOfBag, items);

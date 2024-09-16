@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MochilaGulosaPesoTest {
+class MochilaGulosaPesoTest {
     @Test
     public void testMochilaComItensValidos() {
         Item item1 = new Item(4.0, 3.0);

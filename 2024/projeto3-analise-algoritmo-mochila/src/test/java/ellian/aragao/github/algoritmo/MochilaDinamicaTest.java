@@ -2,6 +2,7 @@ package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
+import ellian.aragao.github.utils.LeitorDeArquivos;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -105,4 +106,17 @@ class MochilaDinamicaTest {
     }
 
 
+
+    @Test
+    public void testMochilaComItensValidos2() {
+        final var path = "data/low-dimensional/f1_l-d_kp_10_269";
+        final var leitorArquivos = new LeitorDeArquivos();
+        MochilaInfo mochilaInfo = leitorArquivos.lerItensDoArquivo(path);
+
+        MochilaDinamica mochilaDinamica = new MochilaDinamica();
+        List<Item> itensSelecionados = mochilaDinamica.calculaItensParaMochila(mochilaInfo);
+
+        double valorTotal = itensSelecionados.stream().mapToDouble(Item::value).sum();
+        assertEquals(295.0, valorTotal);
+    }
 }

@@ -33,10 +33,6 @@ public class MochilaDinamica implements Mochila {
             }
         }
 
-        for (int i = 0; i <= itens.size(); i++) {
-            for (int j = 0; j <= capacidadeMochila; j++) {
-            }
-        }
         List<Item> itensSelecionados = new LinkedList<>();
         int capacidadeRestante = capacidadeMochila.intValue();
         for (int i = itens.size(); i > 0 && capacidadeRestante > 0; i--) {
