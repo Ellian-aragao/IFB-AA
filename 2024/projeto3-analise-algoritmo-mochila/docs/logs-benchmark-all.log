@@ -1,0 +1,1007 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for ellian.aragao.github:projeto3-analise-problema-mochila:jar:1.0-SNAPSHOT
+[WARNING] 'dependencies.dependency.version' for org.junit.jupiter:junit-jupiter:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 48, column 22
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------< ellian.aragao.github:projeto3-analise-problema-mochila >-------
+[INFO] Building projeto3-analise-problema-mochila 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ projeto3-analise-problema-mochila ---
+[INFO] Deleting /home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila/target
+[INFO] 
+[INFO] --- dependency:3.7.0:build-classpath (build-classpath) @ projeto3-analise-problema-mochila ---
+[INFO] Dependencies classpath:
+/home/ellian/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/home/ellian/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/home/ellian/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/ellian/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar:/home/ellian/.m2/repository/org/jacoco/jacoco-maven-plugin/0.8.6/jacoco-maven-plugin-0.8.6.jar:/home/ellian/.m2/repository/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-model/3.0/maven-model-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar:/home/ellian/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar:/home/ellian/.m2/repository/org/apache/maven/maven-core/3.0/maven-core-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar:/home/ellian/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/home/ellian/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar:/home/ellian/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.22/plexus-utils-3.0.22.jar:/home/ellian/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar:/home/ellian/.m2/repository/org/apache/maven/shared/maven-shared-io/1.1/maven-shared-io-1.1.jar:/home/ellian/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.2/maven-artifact-manager-2.0.2.jar:/home/ellian/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-6/wagon-provider-api-1.0-alpha-6.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar:/home/ellian/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/home/ellian/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar:/home/ellian/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0.jar:/home/ellian/.m2/repository/org/apache/maven/reporting/maven-reporting-impl/2.1/maven-reporting-impl-2.1.jar:/home/ellian/.m2/repository/org/apache/maven/maven-project/2.0.10/maven-project-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/maven-profile/2.0.10/maven-profile-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/maven-plugin-registry/2.0.10/maven-plugin-registry-2.0.10.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-core/1.1.2/doxia-core-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.1.2/doxia-logging-api-1.1.2.jar:/home/ellian/.m2/repository/xerces/xercesImpl/2.8.1/xercesImpl-2.8.1.jar:/home/ellian/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/ellian/.m2/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar:/home/ellian/.m2/repository/commons-codec/commons-codec/1.2/commons-codec-1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.1.2/doxia-site-renderer-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/1.1.2/doxia-decoration-model-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.1.2/doxia-module-xhtml-1.1.2.jar:/home/ellian/.m2/repository/org/apache/maven/doxia/doxia-module-fml/1.1.2/doxia-module-fml-1.1.2.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.jar:/home/ellian/.m2/repository/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar:/home/ellian/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.jar:/home/ellian/.m2/repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar:/home/ellian/.m2/repository/commons-validator/commons-validator/1.2.0/commons-validator-1.2.0.jar:/home/ellian/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/home/ellian/.m2/repository/commons-digester/commons-digester/1.6/commons-digester-1.6.jar:/home/ellian/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/ellian/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/ellian/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.core/0.8.6/org.jacoco.core-0.8.6.jar:/home/ellian/.m2/repository/org/ow2/asm/asm/8.0.1/asm-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-commons/8.0.1/asm-commons-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-analysis/8.0.1/asm-analysis-8.0.1.jar:/home/ellian/.m2/repository/org/ow2/asm/asm-tree/8.0.1/asm-tree-8.0.1.jar:/home/ellian/.m2/repository/org/jacoco/org.jacoco.report/0.8.6/org.jacoco.report-0.8.6.jar
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ projeto3-analise-problema-mochila ---
+[INFO] skip non existing resourceDirectory /home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ projeto3-analise-problema-mochila ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug target 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ projeto3-analise-problema-mochila ---
+[INFO] skip non existing resourceDirectory /home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ projeto3-analise-problema-mochila ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug target 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ projeto3-analise-problema-mochila ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ellian.aragao.github.algoritmo.MochilaGulosaValorCustoTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.023 s -- in ellian.aragao.github.algoritmo.MochilaGulosaValorCustoTest
+[INFO] Running ellian.aragao.github.algoritmo.MochilaGulosaPesoTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.002 s -- in ellian.aragao.github.algoritmo.MochilaGulosaPesoTest
+[INFO] Running ellian.aragao.github.algoritmo.sort.MochilaGulosaValorCusto2Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s -- in ellian.aragao.github.algoritmo.sort.MochilaGulosaValorCusto2Test
+[INFO] Running ellian.aragao.github.algoritmo.sort.MochilaGulosaPeso2Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in ellian.aragao.github.algoritmo.sort.MochilaGulosaPeso2Test
+[INFO] Running ellian.aragao.github.algoritmo.MochilaDinamicaTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in ellian.aragao.github.algoritmo.MochilaDinamicaTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 13, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ projeto3-analise-problema-mochila ---
+[INFO] Building jar: /home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila/target/projeto3-analise-problema-mochila-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- exec:1.6.0:java (default-cli) @ projeto3-analise-problema-mochila ---
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_leitura
+
+# Run progress: 0.00% complete, ETA 00:46:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.021 ms/op
+# Warmup Iteration   2: 0.018 ms/op
+# Warmup Iteration   3: 0.018 ms/op
+# Warmup Iteration   4: 0.018 ms/op
+# Warmup Iteration   5: 0.018 ms/op
+Iteration   1: 0.018 ms/op
+Iteration   2: 0.018 ms/op
+Iteration   3: 0.018 ms/op
+Iteration   4: 0.018 ms/op
+Iteration   5: 0.018 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_leitura":
+  0.018 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.018, 0.018, 0.018), stdev = 0.001
+  CI (99.9%): [0.018, 0.018] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaDinamica
+
+# Run progress: 3.57% complete, ETA 00:45:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.377 ms/op
+# Warmup Iteration   2: 0.337 ms/op
+# Warmup Iteration   3: 0.336 ms/op
+# Warmup Iteration   4: 0.336 ms/op
+# Warmup Iteration   5: 0.336 ms/op
+Iteration   1: 0.336 ms/op
+Iteration   2: 0.336 ms/op
+Iteration   3: 0.337 ms/op
+Iteration   4: 0.336 ms/op
+Iteration   5: 0.336 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaDinamica":
+  0.336 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.336, 0.336, 0.337), stdev = 0.001
+  CI (99.9%): [0.336, 0.337] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaPeso
+
+# Run progress: 7.14% complete, ETA 00:43:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.024 ms/op
+# Warmup Iteration   2: 0.021 ms/op
+# Warmup Iteration   3: 0.021 ms/op
+# Warmup Iteration   4: 0.021 ms/op
+# Warmup Iteration   5: 0.021 ms/op
+Iteration   1: 0.021 ms/op
+Iteration   2: 0.021 ms/op
+Iteration   3: 0.021 ms/op
+Iteration   4: 0.021 ms/op
+Iteration   5: 0.021 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaPeso":
+  0.021 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.021, 0.021, 0.021), stdev = 0.001
+  CI (99.9%): [0.021, 0.021] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaValorPorPeso
+
+# Run progress: 10.71% complete, ETA 00:41:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.024 ms/op
+# Warmup Iteration   2: 0.021 ms/op
+# Warmup Iteration   3: 0.021 ms/op
+# Warmup Iteration   4: 0.021 ms/op
+# Warmup Iteration   5: 0.021 ms/op
+Iteration   1: 0.021 ms/op
+Iteration   2: 0.021 ms/op
+Iteration   3: 0.021 ms/op
+Iteration   4: 0.021 ms/op
+Iteration   5: 0.021 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_100.entrada_100_mochilaValorPorPeso":
+  0.021 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.021, 0.021, 0.021), stdev = 0.001
+  CI (99.9%): [0.021, 0.021] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_leitura
+
+# Run progress: 14.29% complete, ETA 00:40:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.135 ms/op
+# Warmup Iteration   2: 0.116 ms/op
+# Warmup Iteration   3: 0.116 ms/op
+# Warmup Iteration   4: 0.116 ms/op
+# Warmup Iteration   5: 0.116 ms/op
+Iteration   1: 0.116 ms/op
+Iteration   2: 0.116 ms/op
+Iteration   3: 0.116 ms/op
+Iteration   4: 0.116 ms/op
+Iteration   5: 0.116 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_leitura":
+  0.116 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.116, 0.116, 0.116), stdev = 0.001
+  CI (99.9%): [0.116, 0.117] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaDinamica
+
+# Run progress: 17.86% complete, ETA 00:38:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.397 ms/op
+# Warmup Iteration   2: 15.550 ms/op
+# Warmup Iteration   3: 15.538 ms/op
+# Warmup Iteration   4: 15.547 ms/op
+# Warmup Iteration   5: 15.553 ms/op
+Iteration   1: 15.532 ms/op
+Iteration   2: 15.541 ms/op
+Iteration   3: 15.541 ms/op
+Iteration   4: 15.540 ms/op
+Iteration   5: 15.543 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaDinamica":
+  15.539 ±(99.9%) 0.017 ms/op [Average]
+  (min, avg, max) = (15.532, 15.539, 15.543), stdev = 0.004
+  CI (99.9%): [15.522, 15.556] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaPeso
+
+# Run progress: 21.43% complete, ETA 00:36:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.180 ms/op
+# Warmup Iteration   2: 0.155 ms/op
+# Warmup Iteration   3: 0.155 ms/op
+# Warmup Iteration   4: 0.155 ms/op
+# Warmup Iteration   5: 0.156 ms/op
+Iteration   1: 0.155 ms/op
+Iteration   2: 0.156 ms/op
+Iteration   3: 0.155 ms/op
+Iteration   4: 0.154 ms/op
+Iteration   5: 0.156 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaPeso":
+  0.155 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (0.154, 0.155, 0.156), stdev = 0.001
+  CI (99.9%): [0.153, 0.157] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaValorPorPeso
+
+# Run progress: 25.00% complete, ETA 00:35:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.195 ms/op
+# Warmup Iteration   2: 0.169 ms/op
+# Warmup Iteration   3: 0.168 ms/op
+# Warmup Iteration   4: 0.168 ms/op
+# Warmup Iteration   5: 0.168 ms/op
+Iteration   1: 0.168 ms/op
+Iteration   2: 0.168 ms/op
+Iteration   3: 0.168 ms/op
+Iteration   4: 0.168 ms/op
+Iteration   5: 0.168 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaValorPorPeso":
+  0.168 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.168, 0.168, 0.168), stdev = 0.001
+  CI (99.9%): [0.167, 0.168] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_leitura
+
+# Run progress: 28.57% complete, ETA 00:33:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.277 ms/op
+# Warmup Iteration   2: 1.097 ms/op
+# Warmup Iteration   3: 1.097 ms/op
+# Warmup Iteration   4: 1.097 ms/op
+# Warmup Iteration   5: 1.097 ms/op
+Iteration   1: 1.097 ms/op
+Iteration   2: 1.098 ms/op
+Iteration   3: 1.103 ms/op
+Iteration   4: 1.103 ms/op
+Iteration   5: 1.103 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_leitura":
+  1.101 ±(99.9%) 0.012 ms/op [Average]
+  (min, avg, max) = (1.097, 1.101, 1.103), stdev = 0.003
+  CI (99.9%): [1.089, 1.113] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaDinamica
+
+# Run progress: 32.14% complete, ETA 00:31:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 2641.115 ms/op
+# Warmup Iteration   2: 2277.574 ms/op
+# Warmup Iteration   3: 2239.007 ms/op
+# Warmup Iteration   4: 2176.648 ms/op
+# Warmup Iteration   5: 2180.010 ms/op
+Iteration   1: 2215.462 ms/op
+Iteration   2: 2205.279 ms/op
+Iteration   3: 2195.626 ms/op
+Iteration   4: 2316.624 ms/op
+Iteration   5: 2201.191 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaDinamica":
+  2226.837 ±(99.9%) 195.282 ms/op [Average]
+  (min, avg, max) = (2195.626, 2226.837, 2316.624), stdev = 50.714
+  CI (99.9%): [2031.555, 2422.119] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaPeso
+
+# Run progress: 35.71% complete, ETA 00:30:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 2.845 ms/op
+# Warmup Iteration   2: 2.448 ms/op
+# Warmup Iteration   3: 2.445 ms/op
+# Warmup Iteration   4: 2.445 ms/op
+# Warmup Iteration   5: 2.444 ms/op
+Iteration   1: 2.445 ms/op
+Iteration   2: 2.446 ms/op
+Iteration   3: 2.445 ms/op
+Iteration   4: 2.445 ms/op
+Iteration   5: 2.444 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaPeso":
+  2.445 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (2.444, 2.445, 2.446), stdev = 0.001
+  CI (99.9%): [2.443, 2.447] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaValorPorPeso
+
+# Run progress: 39.29% complete, ETA 00:28:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 3.190 ms/op
+# Warmup Iteration   2: 2.731 ms/op
+# Warmup Iteration   3: 2.731 ms/op
+# Warmup Iteration   4: 2.729 ms/op
+# Warmup Iteration   5: 2.730 ms/op
+Iteration   1: 2.730 ms/op
+Iteration   2: 2.729 ms/op
+Iteration   3: 2.728 ms/op
+Iteration   4: 2.730 ms/op
+Iteration   5: 2.730 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaValorPorPeso":
+  2.729 ±(99.9%) 0.004 ms/op [Average]
+  (min, avg, max) = (2.728, 2.729, 2.730), stdev = 0.001
+  CI (99.9%): [2.726, 2.733] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_leitura
+
+# Run progress: 42.86% complete, ETA 00:27:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.034 ms/op
+# Warmup Iteration   2: 0.029 ms/op
+# Warmup Iteration   3: 0.029 ms/op
+# Warmup Iteration   4: 0.029 ms/op
+# Warmup Iteration   5: 0.029 ms/op
+Iteration   1: 0.029 ms/op
+Iteration   2: 0.029 ms/op
+Iteration   3: 0.029 ms/op
+Iteration   4: 0.029 ms/op
+Iteration   5: 0.029 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_leitura":
+  0.029 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.029, 0.029, 0.029), stdev = 0.001
+  CI (99.9%): [0.029, 0.029] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaDinamica
+
+# Run progress: 46.43% complete, ETA 00:25:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.688 ms/op
+# Warmup Iteration   2: 0.611 ms/op
+# Warmup Iteration   3: 0.611 ms/op
+# Warmup Iteration   4: 0.610 ms/op
+# Warmup Iteration   5: 0.610 ms/op
+Iteration   1: 0.610 ms/op
+Iteration   2: 0.609 ms/op
+Iteration   3: 0.609 ms/op
+Iteration   4: 0.609 ms/op
+Iteration   5: 0.609 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaDinamica":
+  0.609 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.609, 0.609, 0.610), stdev = 0.001
+  CI (99.9%): [0.609, 0.610] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaPeso
+
+# Run progress: 50.00% complete, ETA 00:23:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.041 ms/op
+# Warmup Iteration   2: 0.036 ms/op
+# Warmup Iteration   3: 0.036 ms/op
+# Warmup Iteration   4: 0.035 ms/op
+# Warmup Iteration   5: 0.035 ms/op
+Iteration   1: 0.035 ms/op
+Iteration   2: 0.035 ms/op
+Iteration   3: 0.035 ms/op
+Iteration   4: 0.035 ms/op
+Iteration   5: 0.035 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaPeso":
+  0.035 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.035, 0.035, 0.035), stdev = 0.001
+  CI (99.9%): [0.035, 0.036] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaValorPorPeso
+
+# Run progress: 53.57% complete, ETA 00:21:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.041 ms/op
+# Warmup Iteration   2: 0.035 ms/op
+# Warmup Iteration   3: 0.035 ms/op
+# Warmup Iteration   4: 0.035 ms/op
+# Warmup Iteration   5: 0.035 ms/op
+Iteration   1: 0.035 ms/op
+Iteration   2: 0.035 ms/op
+Iteration   3: 0.035 ms/op
+Iteration   4: 0.035 ms/op
+Iteration   5: 0.035 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_200.entrada_200_mochilaValorPorPeso":
+  0.035 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.035, 0.035, 0.035), stdev = 0.001
+  CI (99.9%): [0.034, 0.035] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_leitura
+
+# Run progress: 57.14% complete, ETA 00:20:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.270 ms/op
+# Warmup Iteration   2: 0.234 ms/op
+# Warmup Iteration   3: 0.233 ms/op
+# Warmup Iteration   4: 0.233 ms/op
+# Warmup Iteration   5: 0.233 ms/op
+Iteration   1: 0.233 ms/op
+Iteration   2: 0.233 ms/op
+Iteration   3: 0.233 ms/op
+Iteration   4: 0.233 ms/op
+Iteration   5: 0.233 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_leitura":
+  0.233 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.233, 0.233, 0.233), stdev = 0.001
+  CI (99.9%): [0.232, 0.234] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaDinamica
+
+# Run progress: 60.71% complete, ETA 00:18:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 78.241 ms/op
+# Warmup Iteration   2: 62.433 ms/op
+# Warmup Iteration   3: 62.332 ms/op
+# Warmup Iteration   4: 62.267 ms/op
+# Warmup Iteration   5: 62.275 ms/op
+Iteration   1: 62.253 ms/op
+Iteration   2: 62.225 ms/op
+Iteration   3: 62.212 ms/op
+Iteration   4: 62.252 ms/op
+Iteration   5: 62.342 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaDinamica":
+  62.257 ±(99.9%) 0.195 ms/op [Average]
+  (min, avg, max) = (62.212, 62.257, 62.342), stdev = 0.051
+  CI (99.9%): [62.062, 62.452] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaPeso
+
+# Run progress: 64.29% complete, ETA 00:16:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.481 ms/op
+# Warmup Iteration   2: 0.412 ms/op
+# Warmup Iteration   3: 0.414 ms/op
+# Warmup Iteration   4: 0.412 ms/op
+# Warmup Iteration   5: 0.412 ms/op
+Iteration   1: 0.413 ms/op
+Iteration   2: 0.413 ms/op
+Iteration   3: 0.412 ms/op
+Iteration   4: 0.412 ms/op
+Iteration   5: 0.414 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaPeso":
+  0.413 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (0.412, 0.413, 0.414), stdev = 0.001
+  CI (99.9%): [0.411, 0.415] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaValorPorPeso
+
+# Run progress: 67.86% complete, ETA 00:15:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.510 ms/op
+# Warmup Iteration   2: 0.437 ms/op
+# Warmup Iteration   3: 0.437 ms/op
+# Warmup Iteration   4: 0.437 ms/op
+# Warmup Iteration   5: 0.437 ms/op
+Iteration   1: 0.437 ms/op
+Iteration   2: 0.437 ms/op
+Iteration   3: 0.437 ms/op
+Iteration   4: 0.437 ms/op
+Iteration   5: 0.437 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaValorPorPeso":
+  0.437 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.437, 0.437, 0.437), stdev = 0.001
+  CI (99.9%): [0.436, 0.438] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_leitura
+
+# Run progress: 71.43% complete, ETA 00:13:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.077 ms/op
+# Warmup Iteration   2: 0.066 ms/op
+# Warmup Iteration   3: 0.066 ms/op
+# Warmup Iteration   4: 0.066 ms/op
+# Warmup Iteration   5: 0.066 ms/op
+Iteration   1: 0.066 ms/op
+Iteration   2: 0.066 ms/op
+Iteration   3: 0.066 ms/op
+Iteration   4: 0.066 ms/op
+Iteration   5: 0.066 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_leitura":
+  0.066 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.066, 0.066, 0.066), stdev = 0.001
+  CI (99.9%): [0.066, 0.066] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaDinamica
+
+# Run progress: 75.00% complete, ETA 00:11:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 4.412 ms/op
+# Warmup Iteration   2: 3.943 ms/op
+# Warmup Iteration   3: 3.934 ms/op
+# Warmup Iteration   4: 3.932 ms/op
+# Warmup Iteration   5: 3.933 ms/op
+Iteration   1: 3.935 ms/op
+Iteration   2: 3.937 ms/op
+Iteration   3: 3.938 ms/op
+Iteration   4: 3.938 ms/op
+Iteration   5: 3.938 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaDinamica":
+  3.937 ±(99.9%) 0.005 ms/op [Average]
+  (min, avg, max) = (3.935, 3.937, 3.938), stdev = 0.001
+  CI (99.9%): [3.932, 3.943] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaPeso
+
+# Run progress: 78.57% complete, ETA 00:10:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.091 ms/op
+# Warmup Iteration   2: 0.078 ms/op
+# Warmup Iteration   3: 0.078 ms/op
+# Warmup Iteration   4: 0.078 ms/op
+# Warmup Iteration   5: 0.078 ms/op
+Iteration   1: 0.078 ms/op
+Iteration   2: 0.078 ms/op
+Iteration   3: 0.078 ms/op
+Iteration   4: 0.078 ms/op
+Iteration   5: 0.078 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaPeso":
+  0.078 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.078, 0.078, 0.078), stdev = 0.001
+  CI (99.9%): [0.078, 0.078] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaValorPorPeso
+
+# Run progress: 82.14% complete, ETA 00:08:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.099 ms/op
+# Warmup Iteration   2: 0.086 ms/op
+# Warmup Iteration   3: 0.086 ms/op
+# Warmup Iteration   4: 0.086 ms/op
+# Warmup Iteration   5: 0.086 ms/op
+Iteration   1: 0.086 ms/op
+Iteration   2: 0.086 ms/op
+Iteration   3: 0.086 ms/op
+Iteration   4: 0.086 ms/op
+Iteration   5: 0.086 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_500.entrada_500_mochilaValorPorPeso":
+  0.086 ±(99.9%) 0.001 ms/op [Average]
+  (min, avg, max) = (0.086, 0.086, 0.086), stdev = 0.001
+  CI (99.9%): [0.085, 0.086] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_leitura
+
+# Run progress: 85.71% complete, ETA 00:06:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.647 ms/op
+# Warmup Iteration   2: 0.559 ms/op
+# Warmup Iteration   3: 0.559 ms/op
+# Warmup Iteration   4: 0.559 ms/op
+# Warmup Iteration   5: 0.563 ms/op
+Iteration   1: 0.562 ms/op
+Iteration   2: 0.560 ms/op
+Iteration   3: 0.559 ms/op
+Iteration   4: 0.559 ms/op
+Iteration   5: 0.560 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_leitura":
+  0.560 ±(99.9%) 0.004 ms/op [Average]
+  (min, avg, max) = (0.559, 0.560, 0.562), stdev = 0.001
+  CI (99.9%): [0.556, 0.564] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaDinamica
+
+# Run progress: 89.29% complete, ETA 00:05:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 584.947 ms/op
+# Warmup Iteration   2: 467.731 ms/op
+# Warmup Iteration   3: 397.806 ms/op
+# Warmup Iteration   4: 397.513 ms/op
+# Warmup Iteration   5: 397.638 ms/op
+Iteration   1: 397.514 ms/op
+Iteration   2: 398.123 ms/op
+Iteration   3: 403.525 ms/op
+Iteration   4: 397.183 ms/op
+Iteration   5: 397.232 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaDinamica":
+  398.716 ±(99.9%) 10.453 ms/op [Average]
+  (min, avg, max) = (397.183, 398.716, 403.525), stdev = 2.715
+  CI (99.9%): [388.262, 409.169] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaPeso
+
+# Run progress: 92.86% complete, ETA 00:03:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.368 ms/op
+# Warmup Iteration   2: 1.171 ms/op
+# Warmup Iteration   3: 1.170 ms/op
+# Warmup Iteration   4: 1.171 ms/op
+# Warmup Iteration   5: 1.170 ms/op
+Iteration   1: 1.170 ms/op
+Iteration   2: 1.170 ms/op
+Iteration   3: 1.171 ms/op
+Iteration   4: 1.171 ms/op
+Iteration   5: 1.171 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaPeso":
+  1.171 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (1.170, 1.171, 1.171), stdev = 0.001
+  CI (99.9%): [1.169, 1.172] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 21.0.4, OpenJDK 64-Bit Server VM, 21.0.4+7-LTS
+# VM invoker: /home/ellian/.asdf/installs/java/temurin-21.0.4+7.0.LTS/bin/java
+# VM options: -Xms5G -Xmx30G -Dclassworlds.conf=/home/ellian/.asdf/installs/maven/3.9.8/bin/m2.conf -Dmaven.home=/home/ellian/.asdf/installs/maven/3.9.8 -Dlibrary.jansi.path=/home/ellian/.asdf/installs/maven/3.9.8/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/ellian/code/faculdade/IFB-AA/2024/projeto3-analise-algoritmo-mochila
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaValorPorPeso
+
+# Run progress: 96.43% complete, ETA 00:01:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.489 ms/op
+# Warmup Iteration   2: 1.282 ms/op
+# Warmup Iteration   3: 1.282 ms/op
+# Warmup Iteration   4: 1.281 ms/op
+# Warmup Iteration   5: 1.282 ms/op
+Iteration   1: 1.281 ms/op
+Iteration   2: 1.281 ms/op
+Iteration   3: 1.281 ms/op
+Iteration   4: 1.282 ms/op
+Iteration   5: 1.281 ms/op
+
+
+Result "ellian.aragao.github.AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaValorPorPeso":
+  1.281 ±(99.9%) 0.002 ms/op [Average]
+  (min, avg, max) = (1.281, 1.281, 1.282), stdev = 0.001
+  CI (99.9%): [1.280, 1.283] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:47:09
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                        Mode  Cnt     Score     Error  Units
+AlgoritmoRunner.Entrada_100.entrada_100_leitura                  avgt    5     0.018 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_100.entrada_100_mochilaDinamica          avgt    5     0.336 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_100.entrada_100_mochilaPeso              avgt    5     0.021 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_100.entrada_100_mochilaValorPorPeso      avgt    5     0.021 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_1000.entrada_1000_leitura                avgt    5     0.116 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaDinamica        avgt    5    15.539 ±   0.017  ms/op
+AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaPeso            avgt    5     0.155 ±   0.002  ms/op
+AlgoritmoRunner.Entrada_1000.entrada_1000_mochilaValorPorPeso    avgt    5     0.168 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_10000.entrada_10000_leitura              avgt    5     1.101 ±   0.012  ms/op
+AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaDinamica      avgt    5  2226.837 ± 195.282  ms/op
+AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaPeso          avgt    5     2.445 ±   0.002  ms/op
+AlgoritmoRunner.Entrada_10000.entrada_10000_mochilaValorPorPeso  avgt    5     2.729 ±   0.004  ms/op
+AlgoritmoRunner.Entrada_200.entrada_200_leitura                  avgt    5     0.029 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_200.entrada_200_mochilaDinamica          avgt    5     0.609 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_200.entrada_200_mochilaPeso              avgt    5     0.035 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_200.entrada_200_mochilaValorPorPeso      avgt    5     0.035 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_2000.entrada_2000_leitura                avgt    5     0.233 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaDinamica        avgt    5    62.257 ±   0.195  ms/op
+AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaPeso            avgt    5     0.413 ±   0.002  ms/op
+AlgoritmoRunner.Entrada_2000.entrada_2000_mochilaValorPorPeso    avgt    5     0.437 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_500.entrada_500_leitura                  avgt    5     0.066 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_500.entrada_500_mochilaDinamica          avgt    5     3.937 ±   0.005  ms/op
+AlgoritmoRunner.Entrada_500.entrada_500_mochilaPeso              avgt    5     0.078 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_500.entrada_500_mochilaValorPorPeso      avgt    5     0.086 ±   0.001  ms/op
+AlgoritmoRunner.Entrada_5000.entrada_5000_leitura                avgt    5     0.560 ±   0.004  ms/op
+AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaDinamica        avgt    5   398.716 ±  10.453  ms/op
+AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaPeso            avgt    5     1.171 ±   0.002  ms/op
+AlgoritmoRunner.Entrada_5000.entrada_5000_mochilaValorPorPeso    avgt    5     1.281 ±   0.002  ms/op
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47:12 min
+[INFO] Finished at: 2024-09-16T16:00:04-03:00
+[INFO] ------------------------------------------------------------------------
