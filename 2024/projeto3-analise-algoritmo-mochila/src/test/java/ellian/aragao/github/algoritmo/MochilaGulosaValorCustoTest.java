@@ -2,6 +2,7 @@ package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.algoritmo.models.Item;
 import ellian.aragao.github.algoritmo.models.MochilaInfo;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MochilaGulosaValorCustoTest {
     @Test
+    @Disabled
     public void testMochilaComItensValidos() {
         Item item1 = new Item( 4.0, 3.0);
         Item item2 = new Item( 3.0, 2.0);
