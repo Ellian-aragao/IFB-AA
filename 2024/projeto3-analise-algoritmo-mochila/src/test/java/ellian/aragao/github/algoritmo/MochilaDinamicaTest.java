@@ -105,8 +105,6 @@ class MochilaDinamicaTest {
         assertTrue(itensSelecionados.contains(item2));
     }
 
-
-
     @Test
     public void testMochilaComItensValidos2() {
         final var path = "data/low-dimensional/f1_l-d_kp_10_269";
@@ -118,5 +116,18 @@ class MochilaDinamicaTest {
 
         double valorTotal = itensSelecionados.stream().mapToDouble(Item::value).sum();
         assertEquals(295.0, valorTotal);
+    }
+
+    @Test
+    public void testMochilaComItensValidos3() {
+        final var path = "data/low-dimensional/f2_l-d_kp_20_878";
+        final var leitorArquivos = new LeitorDeArquivos();
+        MochilaInfo mochilaInfo = leitorArquivos.lerItensDoArquivo(path);
+
+        MochilaDinamica mochilaDinamica = new MochilaDinamica();
+        List<Item> itensSelecionados = mochilaDinamica.calculaItensParaMochila(mochilaInfo);
+
+        double valorTotal = itensSelecionados.stream().mapToDouble(Item::value).sum();
+        assertEquals(1024.0, valorTotal);
     }
 }
