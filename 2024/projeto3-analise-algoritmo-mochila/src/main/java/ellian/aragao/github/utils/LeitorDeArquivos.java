@@ -19,9 +19,10 @@ public class LeitorDeArquivos {
             final var weightOfBag = Double.parseDouble(firstLine[1]);
             final var items = new ArrayList<Item>(lenOfItems);
 
-            String linha = null;
+            String linha;
             while ((linha = br.readLine()) != null) {
                 var partes = linha.split(" ");
+                if (partes.length != 2) break;
                 var value = Double.parseDouble(partes[0]);
                 var weight = Double.parseDouble(partes[1]);
                 items.add(new Item(weight, value));
