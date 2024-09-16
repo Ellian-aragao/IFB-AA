@@ -18,6 +18,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_100 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -25,16 +26,15 @@ public class AlgoritmoRunner {
             blackhole.consume(leitorDeArquivos.lerItensDoArquivo("data/large_scale/knapPI_1_100_1000_1"));
         }
 
-        @Benchmark
-        @Threads(Threads.MAX)
-        @BenchmarkMode(Mode.AverageTime)
-        @OutputTimeUnit(TimeUnit.MILLISECONDS)
+        @Fork(value = 3)
         public static void entrada_100_mochilaDinamica(Blackhole blackhole) {
             final var itensSelecionados = mochilaDinamica.calculaItensParaMochila(leitorDeArquivos.lerItensDoArquivo("data/large_scale/knapPI_1_100_1000_1"));
             blackhole.consume(itensSelecionados);
         }
 
+
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -44,6 +44,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -55,6 +56,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_200 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -64,6 +66,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -73,6 +76,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -85,6 +89,7 @@ public class AlgoritmoRunner {
     public static class Entrada_500 {
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -93,6 +98,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -102,6 +108,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -111,6 +118,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -122,6 +130,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_1000 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -130,6 +139,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -139,6 +149,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -148,6 +159,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -159,6 +171,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_2000 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -167,6 +180,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -176,6 +190,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -185,6 +200,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -196,6 +212,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_5000 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -204,6 +221,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -213,6 +231,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -222,6 +241,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -233,6 +253,7 @@ public class AlgoritmoRunner {
 
     public static class Entrada_10000 {
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -241,6 +262,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -250,6 +272,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
@@ -259,6 +282,7 @@ public class AlgoritmoRunner {
         }
 
         @Benchmark
+        @Fork(value = 3)
         @Threads(Threads.MAX)
         @BenchmarkMode(Mode.AverageTime)
         @OutputTimeUnit(TimeUnit.MILLISECONDS)
