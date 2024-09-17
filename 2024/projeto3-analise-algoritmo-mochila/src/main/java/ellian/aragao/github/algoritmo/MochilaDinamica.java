@@ -1,27 +1,29 @@
 package ellian.aragao.github.algoritmo;
 
 import ellian.aragao.github.algoritmo.models.Item;
+import ellian.aragao.github.algoritmo.models.MochilaInfo;
 
-import java.io.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
-public class MochilaDinamica {
+public class MochilaDinamica implements Mochila {
 
-    public static void main(String[] args) {
-        List<Item> itens = lerItensDoArquivo("C:\\Users\\João Vítor\\Desktop\\projeto\\IFB-AA\\2024\\projeto3-analise-algoritmo-mochila\\data\\large_scale\\knapPI_1_200_1000_1");
-        int capacidadeMochila = 200;
+    @Override
+    public List<Item> calculaItensParaMochila(MochilaInfo mochilaInfo) {
+        final var itens = mochilaInfo.itens();
+        final var capacidadeMochila = mochilaInfo.capacidadeMochila();
 
-        var tabelaEstados = new double[itens.size() + 1][capacidadeMochila + 1];
+        var tabelaEstados = new double[itens.size() + 1][capacidadeMochila.intValue() + 1];
 
         for (int i = 0; i <= itens.size(); i++) {
-            for (int j = 0; j <= capacidadeMochila; j++) {
+            for (int j = 0; j <= capacidadeMochila.intValue(); j++) {
                 if (i == 0 || j == 0) {
                     tabelaEstados[i][j] = 0;
                 } else {
                     var valorSemItens = tabelaEstados[i - 1][j];
-                    var pesoItemAtual = itens.get(i - 1).weight();
+                    var pesoItemAtual = itens.get(i - 1).weight().intValue();
                     if (pesoItemAtual <= j) {
-                        var valorComItens = itens.get(i - 1).value() + tabelaEstados[i - 1][(int) (j - pesoItemAtual)];
+                        var valorComItens = itens.get(i - 1).value() + tabelaEstados[i - 1][j - pesoItemAtual];
                         tabelaEstados[i][j] = Math.max(valorSemItens, valorComItens);
                     } else {
                         tabelaEstados[i][j] = valorSemItens;
@@ -30,33 +32,14 @@ public class MochilaDinamica {
             }
         }
 
-
-
-        var totalValor = tabelaEstados[itens.size()][capacidadeMochila];
-        System.out.println("itens: " + itens );
-        System.out.println("Total de valor: " + totalValor);
-    }
-
-    // Função para ler os itens de um arquivo txt
-    public static List<Item> lerItensDoArquivo(String caminhoArquivo) {
-        var items = new ArrayList<Item>();
-        try (var br = new BufferedReader(new FileReader(caminhoArquivo))) {
-            var firstLine = br.readLine().split(" ");
-            var lenOfItems = Integer.parseInt(firstLine[0]);
-            var weightOfBag = Integer.parseInt(firstLine[1]);
-
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                var partes = linha.split(" ");
-                var peso = Double.parseDouble(partes[0]);
-                var valor = Double.parseDouble(partes[1]);
-                items.add(new Item(peso, valor));
+        List<Item> itensSelecionados = new LinkedList<>();
+        int capacidadeRestante = capacidadeMochila.intValue();
+        for (int i = itens.size(); i > 0 && capacidadeRestante > 0; i--) {
+            if (tabelaEstados[i][capacidadeRestante] != tabelaEstados[i - 1][capacidadeRestante]) {
+                itensSelecionados.add(itens.get(i - 1));
+                capacidadeRestante -= itens.get(i - 1).weight().intValue();
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
         }
-        return items;  // Retorna a lista de itens lidos corretamente
+        return itensSelecionados;
     }
 }

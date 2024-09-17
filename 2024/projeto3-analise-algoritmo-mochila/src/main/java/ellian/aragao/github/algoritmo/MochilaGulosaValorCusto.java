@@ -1,31 +1,33 @@
 package ellian.aragao.github.algoritmo;
 
-public class MochilaGulosaValorCusto {
-    public static void main(String[] args) {
+import ellian.aragao.github.algoritmo.models.Item;
+import ellian.aragao.github.algoritmo.models.MochilaInfo;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class MochilaGulosaValorCusto implements Mochila {
+    
+    @Override
+    public List<Item> calculaItensParaMochila(MochilaInfo mochilaInfo) {
         // Definição dos itens (weight e valor)
-        Item[] itens = {
-                new Item(5, 10),
-                new Item(3, 20),
-                new Item(2, 15),
-                new Item(4, 30),
-                new Item(6, 40)
-        };
+        final var itens = mochilaInfo.itens();
 
         // Definição da capacidade da mochila
-        int capacidadeMochila = 10;
+        final var capacidadeMochila = mochilaInfo.capacidadeMochila();
 
         // Inicialização do conjunto de itens na mochila
-        boolean[] itensNaMochila = new boolean[itens.length];
+        boolean[] itensNaMochila = new boolean[itens.size()];
 
         // Algoritmo guloso (priorizando pelo valor/custo)
-        for (int i = 0; i < itens.length; i++) {
+        for (int i = 0; i < itens.size(); i++) {
             if (!itensNaMochila[i]) {
-                int totalPeso = get_total_peso(itensNaMochila, itens);
-                if (totalPeso + itens[i].getPeso() <= capacidadeMochila) {
-                    double valorCusto = itens[i].getValor() / itens[i].getPeso();
+                int totalPeso = getTotalPeso(itensNaMochila, itens);
+                if (totalPeso + itens.get(i).weight() <= capacidadeMochila) {
+                    double valorCusto = itens.get(i).value() / itens.get(i).weight();
                     boolean encontrado = false;
                     for (int j = 0; j < i && !encontrado; j++) {
-                        if (!itensNaMochila[j] && itens[j].getValor() / itens[j].getPeso() >= valorCusto) {
+                        if (!itensNaMochila[j] && itens.get(j).value() / itens.get(j).weight() >= valorCusto) {
                             encontrado = true;
                         }
                     }
@@ -36,47 +38,32 @@ public class MochilaGulosaValorCusto {
             }
         }
 
-        // Cálculo do valor da mochila
-        int totalValor = get_total_valor(itensNaMochila, itens);
+        final var itensFinais = new LinkedList<Item>();
+        for (int i = 0; i < itens.size(); i++) {
+            if (!itensNaMochila[i]) continue;
+            itensFinais.add(itens.get(i));
+        }
 
-        System.out.println("Total de valor: " + totalValor);
+        return itensFinais;
     }
 
-    private static int get_total_peso(boolean[] itensNaMochila, Item[] itens) {
+    private static int getTotalPeso(boolean[] itensNaMochila, List<Item> itens) {
         int totalPeso = 0;
-        for (int i = 0; i < itens.length; i++) {
+        for (int i = 0; i < itens.size(); i++) {
             if (itensNaMochila[i]) {
-                totalPeso += itens[i].getPeso();
+                totalPeso += itens.get(i).weight();
             }
         }
         return totalPeso;
     }
 
-    private static int get_total_valor(boolean[] itensNaMochila, Item[] itens) {
+    private static int getTotalValor(boolean[] itensNaMochila, List<Item> itens) {
         int totalValor = 0;
-        for (int i = 0; i < itens.length; i++) {
+        for (int i = 0; i < itens.size(); i++) {
             if (itensNaMochila[i]) {
-                totalValor += itens[i].getValor();
+                totalValor += itens.get(i).value();
             }
         }
         return totalValor;
-    }
-
-    private static class Item {
-        private int peso;
-        private int valor;
-
-        public Item(int peso, int valor) {
-            this.peso = peso;
-            this.valor = valor;
-        }
-
-        public int getPeso() {
-            return peso;
-        }
-
-        public int getValor() {
-            return valor;
-        }
     }
 }
